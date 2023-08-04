@@ -1,22 +1,28 @@
-import Link from "next/link";
+"use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 const NavLinks = [
-  { title: "About Me", href: "/about" },
+  { title: "About", href: "/about" },
   { title: "Projects", href: "/projects" },
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
   return (
-    <nav className="flex justify-between py-4">
-      <h1 className="font-bold text-3xl text-white">
-        <Link href={"/"}>문지웅(Woongsnote)</Link> 
-      </h1>
+    <nav className="flex justify-between py-4 px-2">
       <ul className="flex flex-row space-x-3">
-        {NavLinks.map((link) => (
-          <li key={link.title} className="">
-            <Link href={link.href}>{link.title}</Link>
-          </li>
-        ))}
+        {NavLinks.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <li
+              key={link.title}
+              className={isActive ? "text-blue-500 font-bold" : "text-black"}
+            >
+              <Link href={link.href} className="text-lg">{link.title}</Link>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

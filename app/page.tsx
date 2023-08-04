@@ -1,23 +1,18 @@
-import Image from "next/image";
-import ProfileImg from "../public/profile.png";
-import SocialLinks from "./components/SocialLinks";
+import { Hero, ProjectList } from "./components";
+import { Projects } from "./lib/data";
 
 export default function Home() {
+  const recentProjects = Projects.slice(0, 2);
+
   return (
-    <div className="flex items-center justify-center space-x-4 text-xl md:pt-10">
-      <div className="w-1/3 space-y-4">
-        <p>hello</p>
-        <h1 className="text-4xl">I&apos;m Ji Woong Moon</h1>
-        <p>A Front-End Developer</p>
-        <SocialLinks />
+    <>
+      <Hero />
+      <div className="mx-auto flex flex-col items-center justify-center mt-4">
+        <h2 className="text-3xl text-center border-b-4 w-fit pb-2">
+          Recent Projects
+        </h2>
+        <ProjectList projects={recentProjects} />
       </div>
-      <Image
-        src={ProfileImg}
-        alt={"profile"}
-        width={300}
-        height={300}
-        priority
-      />
-    </div>
+    </>
   );
 }
