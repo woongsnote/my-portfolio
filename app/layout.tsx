@@ -1,8 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Navbar from "./components/Navbar";
-import Logo from "./components/Logo";
+import { Footer, Header } from "./components";
 
 const inter = localFont({
   src: "./fonts/PretendardVariable.woff2",
@@ -21,20 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${inter.variable}`}>
+    <html lang="ko" className={`${inter.variable} scroll-smooth`}>
       <body className="max-w-5xl mx-auto min-h-screen">
-        <header className="flex justify-between items-center">
-          <Logo />
-          <Navbar />
-        </header>
+        <Header />
         <main className="h-full pb-6">{children}</main>
-        <footer className="fixed bottom-0 flex justify-center items-center w-full left-0 space-x-2 h-10 bg-white">
-          <p>
-            © 2023.
-            <span className="text-md font-bold"> 문지웅 </span>
-            | All rights reserved.
-          </p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );

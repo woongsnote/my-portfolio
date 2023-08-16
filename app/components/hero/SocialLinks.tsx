@@ -43,10 +43,10 @@ const SocialLinks = () => {
           key={item.title}
           className="rounded-full border-2 shadow-md p-3 w-fit h-fit hover:bg-sky-500 hover:text-white group relative"
         >
-          {/* <div className="group relative w-full h-full"> */}
-            <Link href={item.href}>{item.icon}</Link>
-            <span className="absolute z-10 top-12 scale-0 transition-all rounded bg-gray-700 text-xs p-1.5 group-hover:scale-100">{item.title}</span>
-          {/* </div> */}
+          <Link href={item.href}>{item.icon}</Link>
+          <span className="absolute z-10 top-12 scale-0 transition-all rounded bg-gray-700 text-xs p-1.5 group-hover:scale-100">
+            {item.title}
+          </span>
         </li>
       ))}
     </ul>
