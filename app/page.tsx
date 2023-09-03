@@ -1,19 +1,18 @@
 import { Suspense } from "react";
 import { AboutMe } from "./components/about";
 import { Divider, Loading } from "./components/common";
-import { Hero } from "./components/hero";
 import { ProjectList } from "./components/projects";
+import HeroSection from "./components/HeroSection";
 
 export default function Home() {
   return (
-    <>
-      <Hero />
-      <Divider />
+    <div className="container mx-auto px-12 py-4">
+      <HeroSection />
       <AboutMe />
       <Divider />
-      <Suspense fallback={<Loading/>}>
+      <Suspense fallback={<Loading />}>
         <ProjectList />
       </Suspense>
-    </>
+    </div>
   );
 }
