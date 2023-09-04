@@ -1,19 +1,19 @@
 import { SetStateAction } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { NavbarItem } from "@data";
+import { NAV_LINKS } from "@/lib/data";
 import NavLink from "./NavLink";
 
 interface NavbarProps {
-  links: NavbarItem[];
+  links: typeof NAV_LINKS;
   isNavbarOpen: boolean;
   setNavbarOpen: React.Dispatch<SetStateAction<boolean>>;
 }
 
 const Navbar = ({ links, isNavbarOpen, setNavbarOpen }: NavbarProps) => {
   return (
-    <nav className="flex justify-between py-4 sm:pr-4">
+    <nav className="flex justify-between py-2 sm:pr-4">
       <button
-        className="md:hidden border rounded-md text-2xl"
+        className="md:hidden border rounded-md text-xl p-2"
         onClick={() => setNavbarOpen(!isNavbarOpen)}
       >
         {isNavbarOpen ? <AiOutlineClose /> : <AiOutlineMenu />}

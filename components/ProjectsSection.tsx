@@ -1,17 +1,18 @@
 "use client";
-import { PROJECTS, ProjectProps } from "@data";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { PROJECTS } from "@/lib/data";
 import ProjectCard from "./ProjectCard";
 import SectionTitle from "./SectionTitle";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
 const ProjectsSection = () => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLUListElement>(null);
   const isInView = useInView(ref, { once: true });
 
-  const sortedProjects = PROJECTS.sort(
-    (a: ProjectProps, b: ProjectProps) =>
-      +new Date(b.releaseDate) - +new Date(a.releaseDate)
+  let projects = [...PROJECTS];
+
+  const sortedProjects = projects.sort(
+    (a, b) => +new Date(b.releaseDate) - +new Date(a.releaseDate)
   );
 
   const cardVariants = {
@@ -31,13 +32,7 @@ const ProjectsSection = () => {
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3 }}
           >
-            <ProjectCard
-              title={project.title}
-              image={project.image}
-              description={project.description}
-              tags={project.tags}
-              githubUrl={project.githubUrl ? project.githubUrl : ""}
-            />
+            <ProjectCard {...project} />
           </motion.li>
         ))}
       </ul>

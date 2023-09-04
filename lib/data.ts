@@ -1,26 +1,10 @@
-export interface NavbarItem {
-  title: string;
-  href: string;
-}
-
-export const NAV_LINKS: NavbarItem[] = [
+export const NAV_LINKS = [
   { title: "About", href: "#about" },
   { title: "Projects", href: "#projects" },
   { title: "Contact", href: "#contact" },
-];
+] as const;
 
-export interface ProjectProps {
-  id: number;
-  title: string;
-  description: string;
-  tags: string[];
-  image: string;
-  githubUrl: string;
-  category: string[];
-  releaseDate: string;
-}
-
-export const PROJECTS: ProjectProps[] = [
+export const PROJECTS = [
   {
     id: 0,
     title: "북적북적",
@@ -39,7 +23,7 @@ export const PROJECTS: ProjectProps[] = [
     image: "/movie-critic.png",
     githubUrl: "https://github.com/woongsnote/movie-critic-fe",
     category: ["All", "Web"],
-    releaseDate: "2022-09-12",
+    releaseDate: "2022-10-22",
   },
   {
     id: 2,
@@ -49,7 +33,7 @@ export const PROJECTS: ProjectProps[] = [
     image: "/toodos.png",
     githubUrl: "https://github.com/woongsnote/pre-onboarding-10th-4-10",
     category: ["All", "Web"],
-    releaseDate: "2022-09-13",
+    releaseDate: "2023-05-23",
   },
   {
     id: 3,
@@ -59,7 +43,7 @@ export const PROJECTS: ProjectProps[] = [
     image: "/tech-blog.png",
     githubUrl: "https://github.com/woongsnote/woongsnote-dev",
     category: ["All", "Web"],
-    releaseDate: "2022-09-14",
+    releaseDate: "2023-04-07",
   },
   {
     id: 4,
@@ -67,9 +51,9 @@ export const PROJECTS: ProjectProps[] = [
     description: "ContentLayer 블로그 구현을 위한 템플릿",
     tags: ["Next.js", "ContentLayer"],
     image: "/tech-blog.png",
-    githubUrl: "https://github.com/woongsnote/woongsnote-dev",
+    githubUrl: "https://github.com/woongsnote/mdx-blog",
     category: ["All", "Web"],
-    releaseDate: "2022-09-15",
+    releaseDate: "2023-08-15",
   },
   {
     id: 5,
@@ -81,4 +65,25 @@ export const PROJECTS: ProjectProps[] = [
     category: ["All", "Web"],
     releaseDate: "2023-08-30",
   },
-];
+] as const;
+
+export const TAB_DATA = [
+  {
+    title: "skills",
+    id: "skills",
+    content: ["React", "JavaScript", "TypeScript", "Next.js"],
+  },
+  {
+    title: "Education",
+    id: "education",
+    content: [
+      "이노베이션캠프 in 서울, React 웹 개발 교육 (수료)",
+      "한국산업기술대학교, 전자공학과 (졸업)",
+    ],
+  },
+  {
+    title: "Certifications",
+    id: "certifications",
+    content: ["정보처리기사"],
+  },
+] as const;

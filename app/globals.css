@@ -25,3 +25,17 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer base {
+  main {
+    @apply flex min-h-screen flex-col pt-16 container mx-auto px-12 py-4;
+  }
+
+  header {
+    @apply z-20 px-4 left-0 w-full top-0 fixed border-b text-white mx-auto bg-black;
+  }
+
+  footer {
+    @apply flex justify-center items-center w-full space-x-2 h-10;
+  }
+}

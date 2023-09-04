@@ -1,18 +1,13 @@
+import { PROJECTS } from "@/lib/data";
 import Image from "next/image";
 import { AiOutlineGithub } from "react-icons/ai";
 
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  githubUrl: string;
-}
+type ProjectCardProps = (typeof PROJECTS)[number];
 
 const ProjectCard = ({
+  image,
   title,
   description,
-  image,
   tags,
   githubUrl,
 }: ProjectCardProps) => {
