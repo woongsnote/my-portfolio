@@ -1,6 +1,6 @@
-import { PROJECTS } from "@/lib/data";
 import Image from "next/image";
 import { AiOutlineGithub } from "react-icons/ai";
+import { PROJECTS } from "@/lib/data";
 
 type ProjectCardProps = (typeof PROJECTS)[number];
 
