@@ -1,7 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Navbar, Footer, Header } from "./components";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
 
 const inter = localFont({
   src: "./fonts/PretendardVariable.woff2",
@@ -23,7 +24,7 @@ export default function RootLayout({
     <html lang="ko" className={`${inter.variable} scroll-smooth`}>
       <body>
         <Header />
-        <main className="flex pb-6 min-h-screen flex-col bg-[#121212]">
+        <main className="flex min-h-screen flex-col pt-16 container mx-auto px-12 py-4">
           {children}
         </main>
         <Footer />

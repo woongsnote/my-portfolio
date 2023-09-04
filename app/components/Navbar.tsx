@@ -1,35 +1,28 @@
-"use client";
+import { SetStateAction } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { NavbarItem } from "@data";
+import NavLink from "./NavLink";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-interface NavbarItem {
-  title: string;
-  href: string;
+interface NavbarProps {
+  links: NavbarItem[];
+  isNavbarOpen: boolean;
+  setNavbarOpen: React.Dispatch<SetStateAction<boolean>>;
 }
 
-const navLinks: NavbarItem[] = [
-  { title: "About", href: "#about" },
-  { title: "Projects", href: "#projects" },
-  { title: "Contact", href: "#contact" },
-];
-
-const Navbar = () => {
-  const pathname = usePathname();
-
+const Navbar = ({ links, isNavbarOpen, setNavbarOpen }: NavbarProps) => {
   return (
     <nav className="flex justify-between py-4 sm:pr-4">
-      <ul className="flex flex-row space-x-3">
-        {navLinks.map((link) => {
-          const isActive = pathname === link.href;
+      <button
+        className="md:hidden border rounded-md text-2xl"
+        onClick={() => setNavbarOpen(!isNavbarOpen)}
+      >
+        {isNavbarOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
+      </button>
+      <ul className="hidden md:flex flex-row space-x-3">
+        {links.map((link) => {
           return (
-            <li
-              key={link.title}
-              className={isActive ? "text-blue-500 font-bold" : "text-white"}
-            >
-              <Link href={link.href} className="text-lg">
-                {link.title}
-              </Link>
+            <li key={link.title}>
+              <NavLink href={link.href} title={link.title} />
             </li>
           );
         })}
