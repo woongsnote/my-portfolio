@@ -1,9 +1,10 @@
 "use client";
+
 import Image from "next/image";
-import { TypeAnimation } from "react-type-animation";
-import SocialLinks from "./SocialLinks";
 import Link from "next/link";
+import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import SocialLinks from "./SocialLinks";
 
 const HeroSection = () => {
   return (
@@ -15,7 +16,7 @@ const HeroSection = () => {
     >
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-8 place-self-center text-center sm:text-left">
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
@@ -26,16 +27,14 @@ const HeroSection = () => {
                 1000,
                 "Web Developer",
                 1000,
-                "Mobile Developer",
-                1000,
               ]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
-            ></TypeAnimation>
+            />
           </h1>
           <p className="text-[#adb7be] text-base sm:text-lg mb-6 lg:text-xl">
-            새로운 기술을 학습하는 것을 좋아하는 개발자 <span className="font-bold">문지웅</span>입니다.
+            새로운 기술을 학습하는 것을 즐기는 개발자 <span className="font-bold">문지웅</span>입니다.
           </p>
           <div>
             <Link

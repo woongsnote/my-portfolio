@@ -1,4 +1,5 @@
 "use client";
+
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { PROJECTS } from "@/lib/data";
@@ -21,9 +22,9 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="pt-16">
+    <section id="projects" className="pt-20 text-white">
       <SectionTitle title="My Projects" />
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 mt-8">
+      <ul ref={ref} className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 mt-8">
         {sortedProjects.map((project) => (
           <motion.li
             key={project.id}

@@ -27,10 +27,10 @@ const AboutSection = () => {
 
   return (
     <section
-      className="md:grid md:grid-cols-2 gap-8 items-center py-20"
+      className="md:grid md:grid-cols-2 gap-8 items-center py-20 text-white"
       id="about"
     >
-      <div className="">
+      <div className="hidden sm:block">
         <Image
           src={"/about-image.jpg"}
           alt="About Image"

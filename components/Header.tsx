@@ -1,7 +1,7 @@
 "use client";
+
 import Link from "next/link";
 import { useState } from "react";
-
 import MenuOverlay from "./MenuOverlay";
 import Navbar from "./Navbar";
 import { NAV_LINKS } from "@/lib/data";

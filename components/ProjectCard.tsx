@@ -12,14 +12,14 @@ const ProjectCard = ({
   githubUrl,
 }: ProjectCardProps) => {
   return (
-    <article className="mx-auto rounded-lg bg-gray-500">
+    <article className="mx-auto rounded-lg bg-gray-500 border border-gray-500">
       <Image
         src={image}
         alt={title}
         priority
         width={600}
         height={600}
-        className="w-full h-40 rounded-t-lg"
+        className="w-full h-48 rounded-t-lg"
       />
       <div className="p-4 rounded-b-lg">
         <h2 className="font-medium text-2xl">{title}</h2>
