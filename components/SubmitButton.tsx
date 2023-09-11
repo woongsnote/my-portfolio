@@ -4,7 +4,7 @@ import { experimental_useFormStatus as useFormStatus } from "react-dom";
 
 const SubmitButton = () => {
   const { pending } = useFormStatus();
-  console.log(pending);
+  
   return (
     <Button
       color="primary"
