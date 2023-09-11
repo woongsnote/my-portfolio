@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header>
       <div className="flex justify-between items-center">
-        <Link href="/" className="text-2xl md:text-5xl py-2 font-bold">
+        <Link href="/" className="text-2xl md:text-4xl py-2 font-bold">
           문지웅
         </Link>
         <Navbar

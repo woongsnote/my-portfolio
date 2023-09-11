@@ -69,7 +69,7 @@ export const PROJECTS = [
 
 export const TAB_DATA = [
   {
-    title: "skills",
+    title: "Skills",
     id: "skills",
     content: ["React", "JavaScript", "TypeScript", "Next.js"],
   },

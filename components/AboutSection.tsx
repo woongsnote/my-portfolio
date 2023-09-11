@@ -1,29 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
+import { Card, CardBody, Tab, Tabs } from "@nextui-org/react";
 import { TAB_DATA } from "@/lib/data";
 import SectionTitle from "./SectionTitle";
-import TabButton from "./TabButton";
 
 const AboutSection = () => {
-  const [tab, setTab] = useState<string>("skills");
-
-  const handleToChange = (id: string) => {
-    setTab(id);
-  };
-
-  const TabDetail = () => {
-    const tabItems = TAB_DATA.find((t) => t.id === tab)?.content;
-
-    return (
-      <ul className="list-disc pl-2">
-        {tabItems?.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    );
-  };
 
   return (
     <section
@@ -53,25 +35,27 @@ const AboutSection = () => {
           있습니다. 이러한 노력으로 프로젝트의 완성도가 높은 팀으로 평가 받은
           경험이 있습니다.
         </p>
-        <div className="flex flex-row justify-start mt-8">
-          <TabButton
-            selectTab={() => handleToChange("skills")}
-            isActive={tab === "skills"}
-            title="Skills"
-          />
-          <TabButton
-            selectTab={() => handleToChange("education")}
-            isActive={tab === "education"}
-            title="Education"
-          />
-          <TabButton
-            selectTab={() => handleToChange("certifications")}
-            isActive={tab === "certifications"}
-            title="Certifications"
-          />
-        </div>
-        <div className="mt-4 h-24">
-          <TabDetail />
+
+        <div className="flex flex-col justify-start mt-8">
+          <Tabs
+            variant="underlined"
+            aria-label="Dynamic tabs"
+            items={[...TAB_DATA]}
+          >
+            {(item) => (
+              <Tab key={item.id} title={item.title}>
+                <Card>
+                  <CardBody>
+                    <ul className="list-disc pl-2">
+                      {item.content.map((content) => (
+                        <li key={content}>{content}</li>
+                      ))}
+                    </ul>
+                  </CardBody>
+                </Card>
+              </Tab>
+            )}
+          </Tabs>
         </div>
       </div>
     </section>
