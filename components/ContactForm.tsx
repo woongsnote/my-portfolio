@@ -1,15 +1,23 @@
 "use client";
 
-import { Button, Input, Textarea } from "@nextui-org/react";
-import { BsSend } from "react-icons/bs";
+import { Input, Textarea } from "@nextui-org/react";
+import { sendEmail } from "@/actions/sendEmail";
+import SubmitButton from "./SubmitButton";
+import toast from "react-hot-toast";
 
 const ContactForm = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-  };
-
   return (
-    <form className="flex flex-col w-full mx-auto md:max-w-3xl" onSubmit={handleSubmit}>
+    <form
+      className="flex flex-col w-full mx-auto md:max-w-3xl"
+      action={async (formData) => {
+        const { data, error } = await sendEmail(formData);
+        if (error) {
+          toast.error(error);
+          return;
+        }
+        toast.success("Email sent successfully!");
+      }}
+    >
       <Input
         isRequired
         name="senderEmail"
@@ -28,11 +36,10 @@ const ContactForm = () => {
         variant="bordered"
         labelPlacement="outside"
         minRows={5}
+        maxLength={5000}
         className="mt-6"
       />
-      <Button type="submit" className="mt-4" endContent={<BsSend />}>
-        보내기
-      </Button>
+      <SubmitButton />
     </form>
   );
 };

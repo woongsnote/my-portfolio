@@ -8,7 +8,7 @@ const ContactSection = () => {
       className="flex flex-col my-12 md:my-16 py-20 gap-4 text-white"
     >
       <SectionTitle title="Contact Me" />
-      <p className="mb-4 text-center">
+      <p className="mb-4 text-center text-sm md:text-lg">
         <a href="mailto:woongsnote@gmail.com" className="underline">
           이메일
         </a>

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Header, Footer } from "@/components";
 import { Providers } from "./providers";
+import { Toaster } from "react-hot-toast";
 
 const inter = localFont({
   src: "./fonts/PretendardVariable.woff2",
@@ -29,6 +30,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <Toaster position="bottom-center"/>
         </Providers>
       </body>
     </html>
