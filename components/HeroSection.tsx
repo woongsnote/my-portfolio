@@ -11,7 +11,7 @@ const HeroSection = () => {
     <motion.section
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.4 }}
       className="lg:py-20"
     >
       <div className="grid grid-cols-1 sm:grid-cols-12">

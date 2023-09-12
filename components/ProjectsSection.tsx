@@ -24,14 +24,17 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="pt-20 text-white">
       <SectionTitle title="My Projects" />
-      <ul ref={ref} className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 mt-8">
-        {sortedProjects.map((project) => (
+      <ul
+        ref={ref}
+        className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 mt-8"
+      >
+        {sortedProjects.map((project, index) => (
           <motion.li
             key={project.id}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3, delay: index * 0.4 }}
           >
             <ProjectCard {...project} />
           </motion.li>
