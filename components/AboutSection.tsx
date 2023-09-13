@@ -1,17 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { Card, CardBody, Tab, Tabs } from "@nextui-org/react";
+import { Tab, Tabs } from "@nextui-org/react";
 import { TAB_DATA } from "@/lib/data";
 import SectionTitle from "./SectionTitle";
 
 const AboutSection = () => {
   return (
     <section
-      className="md:grid md:grid-cols-2 gap-8 items-center py-20 text-white"
+      className="md:grid md:grid-cols-2 gap-8 items-center py-20"
       id="about"
     >
-      <div className="hidden sm:flex items-center justify-center ">
+      <div className="hidden sm:flex items-center justify-center">
         <Image
           src={"/about-image.png"}
           alt="About Image"
@@ -27,8 +27,8 @@ const AboutSection = () => {
           <span className="text-bold">
             새로운 기술에 대한 호기심과 끊임없는 열정을 가지고 있습니다.{" "}
           </span>
-          학습한 지식을 직접 구현한 블로그에 정리하고 공유함으로써 지식 공유에도 기여하고
-          있습니다.
+          학습한 지식을 직접 구현한 블로그에 정리하고 공유함으로써 지식 공유에도
+          기여하고 있습니다.
           <br />
           <span>소통과 협업도 중요시합니다. </span>
           다양한 프로젝트 경험을 통해 프론트엔드와 백엔드 개발자들과의 원활한
@@ -39,22 +39,14 @@ const AboutSection = () => {
         </p>
 
         <div className="flex flex-col justify-start mt-8">
-          <Tabs
-            variant="underlined"
-            aria-label="Dynamic tabs"
-            items={[...TAB_DATA]}
-          >
+          <Tabs variant="light" aria-label="Dynamic tabs" items={[...TAB_DATA]}>
             {(item) => (
               <Tab key={item.id} title={item.title}>
-                <Card>
-                  <CardBody>
-                    <ul className="list-disc pl-2">
-                      {item.content.map((content) => (
-                        <li key={content}>{content}</li>
-                      ))}
-                    </ul>
-                  </CardBody>
-                </Card>
+                <ul className="list-disc pl-2">
+                  {item.content.map((content) => (
+                    <li key={content}>{content}</li>
+                  ))}
+                </ul>
               </Tab>
             )}
           </Tabs>

@@ -13,10 +13,11 @@ const HeroSection = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4 }}
       className="lg:py-20"
+      id="home"
     >
-      <div className="grid grid-cols-1 sm:grid-cols-12">
+      <div className="flex flex-col-reverse sm:grid sm:grid-cols-12">
         <div className="col-span-8 place-self-center text-center sm:text-left">
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl font-extrabold">
+          <h1 className="mb-4 text-4xl sm:text-5xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
@@ -33,7 +34,7 @@ const HeroSection = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#adb7be] text-base sm:text-lg mb-6 lg:text-xl">
+          <p className="text-base sm:text-lg mb-6 lg:text-xl">
             새로운 기술을 학습하는 것을 즐기는 개발자 <span className="font-bold">문지웅</span>입니다.
           </p>
           <div>
@@ -55,8 +56,7 @@ const HeroSection = () => {
           </div>
           <SocialLinks />
         </div>
-        <div className="col-span-4 place-self-center mt-4 lg:mt-0">
-          <div className="rounded-full bg-[#181818] p-4">
+        <div className="col-span-4 place-self-center rounded-full p-4 border-2">
             <Image
               src={"/profile.png"}
               alt="profile"
@@ -65,7 +65,6 @@ const HeroSection = () => {
               priority
               className="w-auto h-auto"
             />
-          </div>
         </div>
       </div>
     </motion.section>

@@ -21,7 +21,7 @@ const ProjectCard = ({
   githubUrl,
 }: ProjectCardProps) => {
   return (
-    <Card isFooterBlurred className="w-full" shadow="sm">
+    <Card className="w-full " shadow="sm">
       <CardHeader className="pb-0 pt-3 px-4 flex-col items-start">
         <small className="text-default-500">{description}</small>
         <h4 className="font-bold text-large">{title}</h4>
@@ -29,7 +29,7 @@ const ProjectCard = ({
       <CardBody className="overflow-visible items-center justify-center h-40">
         <Image
           alt="Card background"
-          className="object-cover rounded-xl"
+          className="object-cover rounded-md border dark:border-none"
           src={image}
           width={270}
         />
@@ -49,32 +49,6 @@ const ProjectCard = ({
         </a>
       </CardFooter>
     </Card>
-    // <article className="mx-auto rounded-lg bg-gray-500 border border-gray-500">
-    //   <Image
-    //     src={image}
-    //     alt={title}
-    //     priority
-    //     width={600}
-    //     height={600}
-    //     className="w-full h-48 rounded-t-lg"
-    //   />
-    //   <div className="p-4 rounded-b-lg">
-    //     <h2 className="font-medium text-2xl">{title}</h2>
-    //     <p className="text-base">{description}</p>
-    //     <div className="flex items-center justify-between mt-2">
-    //       <div className="flex flex-row gap-2">
-    //         {tags?.map((tag) => (
-    //           <span key={tag} className="border p-1 rounded-md text-xs">
-    //             {tag}
-    //           </span>
-    //         ))}
-    //       </div>
-    //       <a href={githubUrl} className="text-2xl mx-2">
-    //         <AiOutlineGithub />
-    //       </a>
-    //     </div>
-    //   </div>
-    // </article>
   );
 };
 

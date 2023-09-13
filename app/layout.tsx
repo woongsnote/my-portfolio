@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { Header, Footer } from "@/components";
 import { Providers } from "./providers";
 import { Toaster } from "react-hot-toast";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 const inter = localFont({
   src: "./fonts/PretendardVariable.woff2",
@@ -22,15 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${inter.variable} scroll-smooth`}>
+    <html lang="ko" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
       <body>
         <Providers>
           <Header />
-          <main className="dark">
-            {children}
-          </main>
+          <main>{children}</main>
           <Footer />
-          <Toaster position="bottom-center"/>
+          <ThemeSwitcher />
+          <Toaster position="bottom-center" />
         </Providers>
       </body>
     </html>

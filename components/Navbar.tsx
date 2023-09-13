@@ -5,20 +5,12 @@ import NavLink from "./NavLink";
 
 interface NavbarProps {
   links: typeof NAV_LINKS;
-  isNavbarOpen: boolean;
-  setNavbarOpen: React.Dispatch<SetStateAction<boolean>>;
 }
 
-const Navbar = ({ links, isNavbarOpen, setNavbarOpen }: NavbarProps) => {
+const Navbar = ({ links }: NavbarProps) => {
   return (
-    <nav className="flex justify-between py-2 sm:pr-4">
-      <button
-        className="md:hidden border rounded-md text-xl p-2"
-        onClick={() => setNavbarOpen(!isNavbarOpen)}
-      >
-        {isNavbarOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-      </button>
-      <ul className="hidden md:flex flex-row space-x-3">
+    <nav className="py-2 px-4 rounded-full border w-fit bg-white dark:bg-black">
+      <ul className="flex flex-row gap-4">
         {links.map((link) => {
           return (
             <li key={link.title}>

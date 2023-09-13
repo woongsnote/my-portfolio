@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-black;
+  @apply bg-white dark:bg-black;
 }
 
 @layer base {
@@ -12,7 +12,7 @@ body {
   }
 
   header {
-    @apply z-20 px-4 left-0 w-full top-0 fixed border-b text-white mx-auto bg-black;
+    @apply z-20 px-4 w-full fixed;
   }
 
   footer {

@@ -22,7 +22,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="pt-20 text-white">
+    <section id="projects" className="pt-20">
       <SectionTitle title="My Projects" />
       <ul
         ref={ref}
