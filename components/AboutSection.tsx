@@ -11,17 +11,18 @@ const AboutSection = () => {
       className="md:grid md:grid-cols-2 gap-8 items-center py-20"
       id="about"
     >
-      <div className="hidden sm:flex items-center justify-center">
+      <div className="hidden sm:flex items-center justify-center h-full">
         <Image
           src={"/about-image.png"}
           alt="About Image"
           priority
           width={500}
           height={500}
-          className="w-auto h-auto rounded-md"
+          objectFit="cover"
+          className="w-3/4 h-auto rounded-md"
         />
       </div>
-      <div>
+      <div className="h-full">
         <SectionTitle title={"About Me"} />
         <p className="text-base">
           <span className="text-bold">

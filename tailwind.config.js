@@ -16,7 +16,7 @@ module.exports = {
         sans: ["var(--font-inter)"],
       },
       colors: {
-        primary: "#0ea5e9",
+        primary: "#3b82f6",
         secondary: "#6366f1",
       },
     },
