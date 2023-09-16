@@ -12,7 +12,7 @@ const ContactSection = () => {
         <a href="mailto:woongsnote@gmail.com" className="underline">
           이메일
         </a>
-        로 직접 연락하시거나, 아래 폼을 통해 연락하실 수 있습니다.
+        로 직접 연락하시거나, 아래 폼으로 연락하실 수 있습니다.
       </p>
       <ContactForm />
     </section>

@@ -24,9 +24,10 @@ const ThemeSwitcher = () => {
   return (
     <Button
       isIconOnly
+      color="primary"
       radius="full"
       variant="shadow"
-      className="z-100 fixed bottom-4 right-4"
+      className="z-50 fixed bottom-4 right-4"
       onClick={() => {
         changeTheme();
       }}

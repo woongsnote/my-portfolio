@@ -8,7 +8,7 @@ import SectionTitle from "./SectionTitle";
 const AboutSection = () => {
   return (
     <section
-      className="md:grid md:grid-cols-2 gap-8 items-center py-20"
+      className="md:grid md:grid-cols-2 gap-8 items-center py-20 px-2"
       id="about"
     >
       <div className="hidden sm:flex items-center justify-center h-full">
@@ -18,7 +18,6 @@ const AboutSection = () => {
           priority
           width={500}
           height={500}
-          objectFit="cover"
           className="w-3/4 h-auto rounded-md"
         />
       </div>

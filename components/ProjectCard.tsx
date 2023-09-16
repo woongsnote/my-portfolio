@@ -19,7 +19,7 @@ const ProjectCard = ({
   githubUrl,
 }: ProjectCardProps) => {
   return (
-    <Card shadow="sm" isHoverable fullWidth className="hover:scale-110">
+    <Card shadow="sm" isHoverable fullWidth className="hover:scale-105 md:hover:scale-110">
       <CardHeader className="pb-0 pt-3 px-4 flex-col items-start">
         <small className="text-default-500">{description}</small>
         <h4 className="font-bold text-large">{title}</h4>
