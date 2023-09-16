@@ -12,7 +12,7 @@ body {
   }
 
   header {
-    @apply z-20 px-4 w-full fixed;
+    @apply z-20 px-4 w-full fixed flex justify-center mx-auto py-2 items-center;
   }
 
   footer {

@@ -56,7 +56,7 @@ const HeroSection = () => {
           </div>
           <SocialLinks />
         </div>
-        <div className="col-span-4 place-self-center rounded-full p-4 border-2">
+        <div className="col-span-4 place-self-center rounded-full p-4 border-2 my-4">
             <Image
               src={"/profile.png"}
               alt="profile"

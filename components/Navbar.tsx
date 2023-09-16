@@ -1,5 +1,3 @@
-import { SetStateAction } from "react";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { NAV_LINKS } from "@/lib/data";
 import NavLink from "./NavLink";
 
@@ -9,7 +7,7 @@ interface NavbarProps {
 
 const Navbar = ({ links }: NavbarProps) => {
   return (
-    <nav className="py-2 px-4 rounded-full border w-fit bg-white dark:bg-black">
+    <nav className="py-2 px-4 rounded-full border-2 w-fit bg-white dark:bg-black">
       <ul className="flex flex-row gap-4">
         {links.map((link) => {
           return (

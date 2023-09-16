@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-const { nextui } = require('@nextui-org/react')
+const { nextui } = require("@nextui-org/react");
 
-const colors = require('tailwindcss/colors')
+// const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: [
@@ -15,11 +15,10 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-inter)"],
       },
-    },
-    colors: {
-      ...colors,
-      primary: colors.sky,
-      secondary: colors.indigo,
+      colors: {
+        primary: "#0ea5e9",
+        secondary: "#6366f1",
+      },
     },
   },
   darkMode: "class",
