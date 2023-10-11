@@ -8,20 +8,20 @@ import SectionTitle from "./SectionTitle";
 const AboutSection = () => {
   return (
     <section
-      className="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-center justify-center py-20 px-2"
+      className="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-center justify-center py-20 px-2 h-screen"
       id="about"
     >
-      <div className="flex items-center justify-center w-72 h-72 self-center lg:w-fit lg:h-fit">
+      <div className="flex items-center justify-center w-72 h-72 self-center lg:w-fit lg:h-fit justify-self-center">
         <Image
           src={"/about-image.png"}
           alt="About Image"
           priority
-          width={500}
-          height={500}
+          width={200}
+          height={200}
           className="w-auto h-auto rounded-md self-center"
         />
       </div>
-      <div className="h-full">
+      <div className="">
         <SectionTitle title={"About Me"} />
         <p className="text-base">
           <span className="text-bold">

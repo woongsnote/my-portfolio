@@ -12,14 +12,14 @@ const HeroSection = () => {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4 }}
-      className="flex flex-col gap-8 items-center pt-2"
+      className="flex flex-col min-h-screen gap-8 items-center justify-center py-10"
       id="home">
-      <div className="flex items-center justify-center mx-auto p-4 bg-primary-200 rounded-full w-fit h-fit">
+      <div className="flex items-center justify-center mx-auto p-4 border-2 border-primary-200 rounded-full w-fit h-fit">
         <Image
           src={"/profile.png"}
           alt="profile"
-          width={140}
-          height={140}
+          width={120}
+          height={120}
           priority
           className="w-auto h-auto self-center"
         />
@@ -48,7 +48,7 @@ const HeroSection = () => {
           새로운 기술을 학습하는 것을 즐기는 개발자{" "}
           <span className="font-bold">문지웅</span>입니다.
         </p>
-        <div className="flex items-center justify-content-center gap-4">
+        <div className="flex flex-col lg:flex-row items-center justify-content-center gap-4">
           <Link
             href="#contact"
             className="inline-block px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white">

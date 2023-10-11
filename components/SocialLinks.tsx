@@ -37,7 +37,7 @@ const SocialLinkItems = [
 
 const SocialLinks = () => {
   return (
-    <ul className="flex flex-row space-x-3 text-2xl my-6 items-center justify-center sm:justify-start">
+    <ul className="flex flex-row gap-4 text-2xl my-6 items-center justify-center sm:justify-start">
       {SocialLinkItems.map((item) => (
         <li
           key={item.title}

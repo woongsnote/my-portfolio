@@ -5,7 +5,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col py-20 gap-4"
+      className="flex flex-col py-20 gap-4 h-screen justify-center"
     >
       <SectionTitle title="Contact Me" />
       <p className="mb-4 text-center text-sm md:text-lg">

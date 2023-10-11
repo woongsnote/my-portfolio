@@ -22,7 +22,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20 px-2">
+    <section id="projects" className="py-20 px-2 min-h-screen">
       <SectionTitle title="My Projects" />
       <ul
         ref={ref}
