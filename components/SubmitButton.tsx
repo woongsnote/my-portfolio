@@ -1,6 +1,6 @@
 import { Button } from "@nextui-org/react";
 import { BsSend } from "react-icons/bs";
-import { useFormStatus } from "react-dom";
+import { experimental_useFormStatus as useFormStatus } from "react-dom";
 
 export default function SubmitButton() {
   const { pending } = useFormStatus();
