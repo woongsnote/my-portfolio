@@ -1,4 +1,5 @@
 import { Html } from "@react-email/html";
+import { Tailwind } from "@react-email/tailwind";
 import {
   Body,
   Container,
@@ -7,17 +8,18 @@ import {
   Hr,
   Preview,
   Section,
-  Tailwind,
   Text,
 } from "@react-email/components";
 
 type ContactFormEmailProps = {
   senderEmail: string;
+  title: string;
   message: string;
 };
 
 export default function ContactFormEmail({
   senderEmail,
+  title,
   message,
 }: ContactFormEmailProps) {
   return (
@@ -31,9 +33,11 @@ export default function ContactFormEmail({
               <Heading className="leading-tight">
                 You received the following message from the contact form
               </Heading>
-              <Text>{message}</Text>
+              <Heading as="h2">제목: {title}</Heading>
+
+              <Text>내용: {message}</Text>
               <Hr />
-              <Text>The sender's email is: {senderEmail}</Text>
+              <Text>The sender&apos;s email is: {senderEmail}</Text>
             </Section>
           </Container>
         </Body>
