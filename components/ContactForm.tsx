@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 const ContactForm = () => {
   return (
     <form
-      className="flex flex-col w-full mx-auto md:max-w-3xl gap-4"
+      className="flex flex-col w-full mx-auto md:max-w-3xl gap-2"
       action={async (formData) => {
         const { data, error } = await sendEmail(formData);
 

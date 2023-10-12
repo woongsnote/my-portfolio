@@ -2,7 +2,7 @@ import { Button } from "@nextui-org/react";
 import { BsSend } from "react-icons/bs";
 import { experimental_useFormStatus as useFormStatus } from "react-dom";
 
-const SubmitButton = () => {
+export default function SubmitButton() {
   const { pending } = useFormStatus();
   
   return (
@@ -10,7 +10,7 @@ const SubmitButton = () => {
       color="primary"
       variant="shadow"
       type="submit"
-      className="mt-4 disabled:bg-gray-500"
+      className="mt-4 disabled:bg-gray-500 w-full sm:w-fit justify-center"
       isLoading={pending}
       isDisabled={pending}
     >
@@ -24,6 +24,4 @@ const SubmitButton = () => {
       )}
     </Button>
   );
-};
-
-export default SubmitButton;
+}
