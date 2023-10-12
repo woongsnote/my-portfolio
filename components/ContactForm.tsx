@@ -11,13 +11,12 @@ const ContactForm = () => {
       className="flex flex-col w-full mx-auto md:max-w-3xl gap-4"
       action={async (formData) => {
         const { data, error } = await sendEmail(formData);
-        console.log(data);
-        
+
         if (error) {
           toast.error(error);
           return;
         }
-        toast.success("Email sent successfully!");
+        toast.success("이메일이 성공적으로 전송되었습니다!");
       }}>
       <Input
         isRequired
@@ -28,6 +27,16 @@ const ContactForm = () => {
         variant="bordered"
         maxLength={200}
         placeholder="이메일 주소를 입력하세요."
+      />
+      <Input
+        isRequired
+        name="title"
+        type="text"
+        label="제목"
+        labelPlacement="outside"
+        variant="bordered"
+        maxLength={200}
+        placeholder="제목을 입력하세요."
       />
 
       <Textarea

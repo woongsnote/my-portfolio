@@ -8,10 +8,10 @@ import SectionTitle from "./SectionTitle";
 const AboutSection = () => {
   return (
     <section
-      className="flex flex-col lg:grid lg:grid-cols-2 gap-8 items-center justify-center py-20 px-2 h-screen"
-      id="about"
-    >
-      <div className="flex items-center justify-center w-72 h-72 self-center lg:w-fit lg:h-fit justify-self-center">
+      className="flex flex-col lg:grid lg:grid-cols-2 gap-4 items-center justify-center py-20 px-2 lg:h-screen w-full"
+      id="about">
+      <SectionTitle title="About Me" />
+      <div className="flex items-center justify-center w-36 h-36 self-center lg:w-fit lg:h-fit justify-self-center">
         <Image
           src={"/about-image.png"}
           alt="About Image"
@@ -21,8 +21,7 @@ const AboutSection = () => {
           className="w-auto h-auto rounded-md self-center"
         />
       </div>
-      <div className="">
-        <SectionTitle title={"About Me"} />
+      <div className="h-full">
         <p className="text-base">
           <span className="text-bold">
             새로운 기술에 대한 호기심과 끊임없는 열정을 가지고 있습니다.{" "}

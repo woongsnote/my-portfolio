@@ -21,7 +21,7 @@ const ProjectCard = ({
   return (
     <Card shadow="sm" isHoverable fullWidth className="hover:scale-105 md:hover:scale-110">
       <CardHeader className="pb-0 pt-3 px-4 flex-col items-start">
-        <small className="text-default-500">{description}</small>
+        <small className="text-default-500 text-xs">{description}</small>
         <h4 className="font-bold text-large">{title}</h4>
       </CardHeader>
       <CardBody className="overflow-visible items-center justify-center h-40">
