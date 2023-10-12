@@ -1,4 +1,5 @@
 import { Html } from "@react-email/html";
+import { Tailwind } from "@react-email/tailwind";
 import {
   Body,
   Container,
@@ -7,7 +8,6 @@ import {
   Hr,
   Preview,
   Section,
-  Tailwind,
   Text,
 } from "@react-email/components";
 
