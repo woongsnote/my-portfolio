@@ -10,7 +10,7 @@ export default function SubmitButton() {
       color="primary"
       variant="shadow"
       type="submit"
-      className="mt-4 disabled:bg-gray-500 w-full sm:w-fit justify-center"
+      className="mt-4 disabled:bg-gray-500 w-full"
       isLoading={pending}
       isDisabled={pending}>
       {pending ? (

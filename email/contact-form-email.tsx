@@ -1,3 +1,5 @@
+"use client";
+
 import { Html } from "@react-email/html";
 import { Tailwind } from "@react-email/tailwind";
 import {
