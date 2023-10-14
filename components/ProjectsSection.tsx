@@ -26,7 +26,7 @@ const ProjectsSection = () => {
       <SectionTitle title="My Projects" />
       <ul
         ref={ref}
-        className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12 mt-8"
+        className="grid md:grid-cols-2 gap-8 md:gap-12 mt-8"
       >
         {sortedProjects.map((project, index) => (
           <motion.li
