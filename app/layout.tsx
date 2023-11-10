@@ -23,14 +23,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className={`${inter.variable} scroll-smooth`} suppressHydrationWarning>
-      <body>
+    <html
+      lang='ko'
+      className={`${inter.variable} scroll-smooth`}
+      suppressHydrationWarning>
+      <body className='bg-gray-300 dark:bg-gray-600'>
         <Providers>
           <Header />
-          <main>{children}</main>
+          <main className='container max-w-screen-sm mx-auto shadow-lg bg-white dark:bg-stone-700 rounded-lg p-2'>
+            {children}
+          </main>
           <Footer />
           <ThemeSwitcher />
-          <Toaster position="top-center" />
+          <Toaster position='top-center' />
         </Providers>
       </body>
     </html>

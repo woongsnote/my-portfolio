@@ -1,6 +1,6 @@
 import {
   AboutSection,
-  ContactSection,
+  // ContactSection,
   HeroSection,
   ProjectsSection,
 } from "@/components";
@@ -11,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
-      <ContactSection />
+      {/* <ContactSection /> */}
     </>
   );
 }

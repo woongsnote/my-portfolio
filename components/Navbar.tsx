@@ -7,8 +7,8 @@ interface NavbarProps {
 
 const Navbar = ({ links }: NavbarProps) => {
   return (
-    <nav className="py-2 px-4 rounded-full border-2 w-fit bg-white dark:bg-black">
-      <ul className="flex flex-row gap-4">
+    <nav className='rounded-full shadow-md w-full max-w-screen-sm mb-2 bg-white dark:bg-black mx-auto'>
+      <ul className='flex gap-4 py-4'>
         {links.map((link) => {
           return (
             <li key={link.title}>
