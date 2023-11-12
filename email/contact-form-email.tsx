@@ -19,7 +19,7 @@ type ContactFormEmailProps = {
   message: string;
 };
 
-export default function ContactFormEmail({
+export function ContactFormEmail({
   senderEmail,
   title,
   message,

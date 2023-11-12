@@ -1,10 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Header, Footer } from "@/components";
 import { Providers } from "./providers";
 import { Toaster } from "react-hot-toast";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = localFont({
   src: "./fonts/PretendardVariable.woff2",
@@ -24,18 +24,18 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang='ko'
+      lang="ko"
       className={`${inter.variable} scroll-smooth`}
-      suppressHydrationWarning>
-      <body className='bg-gray-300 dark:bg-gray-600'>
+      suppressHydrationWarning
+    >
+      <body>
         <Providers>
           <Header />
-          <main className='container max-w-screen-sm mx-auto shadow-lg bg-white dark:bg-stone-700 rounded-lg p-2'>
+          <main className="flow content-grid">
             {children}
-          </main>
+            </main>
           <Footer />
-          <ThemeSwitcher />
-          <Toaster position='top-center' />
+          <Toaster position="top-center" />
         </Providers>
       </body>
     </html>

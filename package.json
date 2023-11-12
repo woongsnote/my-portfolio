@@ -1,15 +1,15 @@
 {
   "name": "my-portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "prepare": "panda codegen",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@nextui-org/react": "^2.2.8",
     "@react-email/button": "0.0.11",
     "@react-email/components": "^0.0.11",
     "@react-email/html": "0.0.6",
@@ -26,15 +26,14 @@
     "resend": "^2.0.0"
   },
   "devDependencies": {
-    "encoding": "^0.1.13",
-    "postcss": "8.4.31",
-    "eslint": "8.53.0",
-    "eslint-config-next": "14.0.2",
+    "@pandacss/dev": "^0.18.2",
+    "@types/node": "20.9.0",
     "@types/react": "18.2.37",
     "@types/react-dom": "18.2.15",
-    "autoprefixer": "10.4.16",
-    "tailwindcss": "3.3.5",
-    "@types/node": "20.9.0",
+    "encoding": "^0.1.13",
+    "eslint": "8.53.0",
+    "eslint-config-next": "14.0.2",
+    "sharp": "^0.32.6",
     "typescript": "5.2.2"
   }
 }

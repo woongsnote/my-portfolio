@@ -1,9 +1,7 @@
-"use client";
-
-import { Button } from "@nextui-org/react";
+import { BsSunFill, BsMoonFill } from "react-icons/bs";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-import { BsMoonFill, BsSunFill } from "react-icons/bs";
+import { useState, useEffect } from "react";
+import { css } from "@/styled-system/css";
 
 const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState<boolean>(false);
@@ -22,18 +20,14 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <Button
-      isIconOnly
-      color="primary"
-      radius="full"
-      variant="shadow"
-      className="z-50 fixed bottom-4 right-4"
+    <button
+      className={css({ rounded: "full" })}
       onClick={() => {
         changeTheme();
       }}
     >
       {currentTheme === "dark" ? <BsSunFill /> : <BsMoonFill />}
-    </Button>
+    </button>
   );
 };
 

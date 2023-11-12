@@ -1,11 +1,9 @@
+import { css } from "@/styled-system/css";
+
 const Footer = () => {
   return (
-    <footer>
-      <p>
-        © 2023.
-        <span className="text-md font-bold"> 문지웅 </span>| All rights
-        reserved.
-      </p>
+    <footer className="content-grid">
+      <div className={css({ textAlign: "center" })}>footer</div>
     </footer>
   );
 };
