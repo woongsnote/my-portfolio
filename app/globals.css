@@ -2,8 +2,8 @@
 
 .content-grid {
   --padding-inline: 1rem;
-  --content-max-width: 700px;
-  --breakout-max-width: 768px;
+  --content-max-width: 570px;
+  --breakout-max-width: 600px;
 
   --breakout-size: calc(
     (var(--breakout-max-width) - var(--content-max-width)) / 2
@@ -33,12 +33,11 @@
 
 .content-grid > .full-width {
   grid-column: full-width;
-
   display: grid;
   grid-template-columns: inherit;
 }
 
-img.full-width {
+.full-width {
   width: 100%;
   max-height: 45vh;
   object-fit: cover;
@@ -73,8 +72,6 @@ img.full-width {
 
 body {
   margin: 0;
-  font-family: var(--font-family);
-  font-size: var(--fs-400);
   line-height: 1.6;
 }
 
@@ -92,17 +89,6 @@ figure {
 img {
   max-width: 100%;
   display: block;
-}
-
-.site-title {
-  font-size: var(--fs-900);
-  line-height: 1.05;
-  text-transform: uppercase;
-}
-
-.section-title {
-  font-size: var(--fs-800);
-  line-height: 1.1;
 }
 
 .bg-primary {
@@ -151,6 +137,12 @@ img {
   border-radius: 1rem;
   padding-inline: 1rem;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+:root.dark {
+  .primary-header__layout {
+    background-color: black;
+  }
 }
 
 nav ul {

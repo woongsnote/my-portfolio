@@ -21,11 +21,14 @@ const ThemeSwitcher = () => {
 
   return (
     <button
-      className={css({ rounded: "full" })}
+      className={css({
+        rounded: "full",
+        cursor: "pointer",
+        _hover: { color: "blue.500" },
+      })}
       onClick={() => {
         changeTheme();
-      }}
-    >
+      }}>
       {currentTheme === "dark" ? <BsSunFill /> : <BsMoonFill />}
     </button>
   );

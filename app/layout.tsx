@@ -5,11 +5,12 @@ import { Providers } from "./providers";
 import { Toaster } from "react-hot-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MainLayout from "@/components/MainLayout";
 
-const inter = localFont({
+const pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-pretendard",
 });
 
 export const metadata: Metadata = {
@@ -24,18 +25,17 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="ko"
-      className={`${inter.variable} scroll-smooth`}
-      suppressHydrationWarning
-    >
+      lang='ko'
+      className={`${pretendard.variable} scroll-smooth`}
+      suppressHydrationWarning>
       <body>
         <Providers>
           <Header />
-          <main className="flow content-grid">
-            {children}
-            </main>
+          <main className='flow content-grid'>
+            <MainLayout>{children}</MainLayout>
+          </main>
           <Footer />
-          <Toaster position="top-center" />
+          <Toaster position='top-center' />
         </Providers>
       </body>
     </html>

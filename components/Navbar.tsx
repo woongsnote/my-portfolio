@@ -44,23 +44,12 @@ const Navbar = () => {
                 flexDir: "column",
                 alignItems: "center",
                 justifyContent: "center",
-              })}
-            >
+              })}>
               <span
                 className={`${
                   pathname === link.href ? activeLinkStyle : linkStyle
-                }`}
-              >
+                }`}>
                 {link.icon}
-              </span>
-              <span
-                className={css({
-                  color: "black",
-                  fontSize: "sm",
-                  display: { base: "none", sm: "block" },
-                })}
-              >
-                {link.title}
               </span>
             </Link>
           </li>

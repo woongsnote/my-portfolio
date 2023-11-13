@@ -20,7 +20,13 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      tokens: {
+        fonts: {
+          pretendard: { value: "var(--font-pretendard), sans-serif" },
+        },
+      },
+    },
   },
 
   //to reduce the size of the generated css

@@ -7,12 +7,11 @@ import { css } from "@/styled-system/css";
 
 const Header = () => {
   return (
-    <header className="primary-header content-grid">
-      <div className="primary-header__layout breakout">
+    <header className='primary-header content-grid'>
+      <div className='primary-header__layout'>
         <Navbar />
         <div
-          className={css({ display: "flex", alignItems: "center", gap: "2" })}
-        >
+          className={css({ display: "flex", alignItems: "center", gap: "2" })}>
           <ThemeSwitcher />
           <ContactLink />
         </div>
