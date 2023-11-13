@@ -18,16 +18,19 @@ export default function Home() {
           display: "flex",
           justifyContent: { base: "center", md: "space-between" },
           mt: "10",
-          flexDir: { base: "column", md: "row" },
+          flexDir: { base: "column-reverse", md: "row" },
         })}
       >
-        <div className={css({ order: { base: "2", sm: "1" } })}>
+        <div
+          className={css({
+            w: { base: "full", md: "2/3" },
+          })}
+        >
           <h1 className={css({ fontSize: "3xl", fontWeight: "black" })}>
             I&apos;m Moon Ji woong
           </h1>
           <p className={css({ fontSize: "md" })}>
-            새로운 기술을 학습하는 것을 즐기는 <br />
-            개발자 문지웅입니다.
+            새로운 기술을 학습하는 것을 즐기는 개발자 문지웅입니다.
           </p>
         </div>
         <div
@@ -41,7 +44,6 @@ export default function Home() {
             border: "1px solid #eee",
             rounded: "full",
             p: "3",
-            order: "1",
           })}
         >
           <Image
