@@ -2,18 +2,19 @@ import { css } from "@/styled-system/css";
 
 const Footer = () => {
   return (
-    <footer className='content-grid'>
+    <footer className="content-grid">
       <div
         className={css({
           textAlign: "center",
-          bgColor: { base: "white", _dark: "black" },
+          bgColor: { base: "white", _dark: "#212121" },
           px: "2",
           py: "4",
           roundedBottom: "lg",
           mb: "4",
-        })}>
+        })}
+      >
         <hr />
-        <p className={css({ fontSize: "sm" })}>
+        <p className={css({ fontSize: "sm", mt: "4" })}>
           © 2023.
           <span className={css({ fontSize: "md", fontWeight: "bold" })}>
             {" "}

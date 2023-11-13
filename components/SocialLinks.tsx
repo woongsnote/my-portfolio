@@ -35,11 +35,12 @@ const SocialLinks = () => {
         justifyContent: "space-between",
         alignItems: "center",
         mt: "4",
-        bgColor: "gray.100",
+        bgColor: { base: "gray.100", _dark: "#2c2c2c" },
         minH: "16",
-        px: "2",
+        px: "4",
         rounded: "lg",
-      })}>
+      })}
+    >
       <span>Follow Me</span>
       <ul className={css({ display: "flex", gap: "4" })}>
         {socials.map((link) => (
@@ -50,6 +51,7 @@ const SocialLinks = () => {
               borderColor: "black",
               shadow: "lg",
               fontSize: "md",
+              bgColor: { base: "gary.300", _dark: "#373737" },
               p: "2",
               _hover: {
                 border: "none",
@@ -57,8 +59,9 @@ const SocialLinks = () => {
                 bgColor: "blue.500",
                 cursor: "pointer",
               },
-            })}>
-            <a href={link.href} target='_blank'>
+            })}
+          >
+            <a href={link.href} target="_blank">
               {link.icon}
             </a>
           </li>

@@ -73,17 +73,7 @@
 body {
   margin: 0;
   line-height: 1.6;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-figure {
-  margin: 0;
+  /* background-color: #eee; */
 }
 
 img {
@@ -141,7 +131,11 @@ img {
 
 :root.dark {
   .primary-header__layout {
-    background-color: black;
+    background-color: #212121;
+  }
+
+  body {
+    background-color: #161616;
   }
 }
 

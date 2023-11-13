@@ -1,19 +1,19 @@
 import { css } from "@/styled-system/css";
 import Link from "next/link";
-import { RiArrowRightLine } from "react-icons/ri";
 
 const ContactLink = () => {
   return (
     <Link
-      href='/contact'
+      href="/contact"
       className={css({
         px: "2",
         rounded: "lg",
         fontSize: { base: "sm", md: "md" },
-        bgColor: "black",
+        bgColor: { base: "black", _dark: "#373737" },
         color: "white",
         _hover: { bgColor: "blue.500" },
-      })}>
+      })}
+    >
       Contact me
     </Link>
   );
