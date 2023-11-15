@@ -1,20 +1,20 @@
+"use client";
+
 import { sendEmail } from "@/app/actions";
 import { css } from "@/styled-system/css";
-import { useFormStatus } from "react-dom";
+import SubmitButton from "./SubmitButton";
 import toast from "react-hot-toast";
-const ContactForm = () => {
-  const { pending } = useFormStatus();
 
+const ContactForm = () => {
   return (
     <form
-      action={async (formData: FormData) => {
+      action={async (formData) => {
         const { data, error } = await sendEmail(formData);
-
         if (error) {
           toast.error(error);
           return;
         }
-        toast.success("Email Send Success");
+        toast.success("이메일이 성공적으로 전송되었습니다!");
       }}
       className={css({
         display: "flex",
@@ -22,7 +22,8 @@ const ContactForm = () => {
         w: "full",
         p: "4",
         gap: "4",
-      })}>
+      })}
+    >
       <div
         className={css({
           display: "flex",
@@ -30,12 +31,13 @@ const ContactForm = () => {
           justifyContent: "space-between",
           gap: "4",
           flexDir: { base: "column", md: "row" },
-        })}>
+        })}
+      >
         <input
-          name='senderName'
-          type='text'
+          name="senderName"
+          type="text"
           maxLength={20}
-          placeholder='이름'
+          placeholder="이름"
           className={css({
             rounded: "lg",
             w: "full",
@@ -45,10 +47,10 @@ const ContactForm = () => {
           })}
         />
         <input
-          name='senderEmail'
-          type='email'
+          name="senderEmail"
+          type="email"
           maxLength={200}
-          placeholder='이메일'
+          placeholder="이메일"
           className={css({
             rounded: "lg",
             w: "full",
@@ -59,8 +61,8 @@ const ContactForm = () => {
         />
       </div>
       <textarea
-        name='message'
-        placeholder='내용'
+        name="message"
+        placeholder="내용"
         maxLength={5000}
         className={css({
           py: "1",
@@ -70,19 +72,7 @@ const ContactForm = () => {
           bgColor: { base: "#f1f4fa", _dark: "#262626" },
         })}
       />
-      <button
-        type='submit'
-        className={css({
-          w: "full",
-          bgColor: { base: "black", _dark: "#404040" },
-          color: "white",
-          rounded: "lg",
-          py: "2",
-          mx: "auto",
-          cursor: "pointer",
-        })}>
-        {pending ? "전송 중입니다..." : "보내기"}
-      </button>
+      <SubmitButton />
     </form>
   );
 };

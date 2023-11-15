@@ -2,14 +2,15 @@
 
 import { getErrorMessage, validateString } from "@/lib/utils";
 import { Resend } from "resend";
-import { ContactFormEmail } from "@/email/contact-form-email";
-import { createElement } from "react";
+import { EmailTemplate } from "@/components/EmailTemplate";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmail(formData: FormData) {
   const senderName = formData.get("senderName");
+
   const senderEmail = formData.get("senderEmail");
+
   const message = formData.get("message");
 
   if (!validateString(senderEmail, 500)) {
@@ -28,26 +29,22 @@ export async function sendEmail(formData: FormData) {
     };
   }
 
-  let data;
-
   try {
-    data = await resend.emails.send({
+    const { data } = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: "woongsnote@gmail.com",
       subject: "Message from Contact Form",
-      reply_to: senderEmail?.toString(),
-      react: createElement(ContactFormEmail, {
-        message: message as string,
-        senderName: senderName as string,
+      reply_to: senderEmail as string,
+      react: EmailTemplate({
         senderEmail: senderEmail as string,
+        senderName: senderName as string,
+        message: message as string,
       }),
     });
+    return { data };
   } catch (error: unknown) {
     return {
       error: getErrorMessage(error),
     };
   }
-  return {
-    data,
-  };
 }
