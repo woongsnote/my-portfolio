@@ -14,6 +14,7 @@ const ContactForm = () => {
           toast.error(error);
           return;
         }
+        console.log(data);
         toast.success("이메일이 성공적으로 전송되었습니다!");
       }}
       className={css({
