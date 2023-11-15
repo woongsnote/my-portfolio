@@ -8,8 +8,8 @@ import { createElement } from "react";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmail(formData: FormData) {
+  const senderName = formData.get("senderName");
   const senderEmail = formData.get("senderEmail");
-  const title = formData.get("title");
   const message = formData.get("message");
 
   if (!validateString(senderEmail, 500)) {
@@ -17,7 +17,7 @@ export async function sendEmail(formData: FormData) {
       error: "Invalid Sender Email",
     };
   }
-  if (!validateString(title, 500)) {
+  if (!validateString(senderName, 500)) {
     return {
       error: "Invalid title",
     };
@@ -27,16 +27,18 @@ export async function sendEmail(formData: FormData) {
       error: "Invalid Message",
     };
   }
+
   let data;
+
   try {
     data = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: "woongsnote@gmail.com",
       subject: "Message from Contact Form",
-      reply_to: senderEmail as string,
+      reply_to: senderEmail?.toString(),
       react: createElement(ContactFormEmail, {
         message: message as string,
-        title: title as string,
+        senderName: senderName as string,
         senderEmail: senderEmail as string,
       }),
     });

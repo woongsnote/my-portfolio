@@ -2,7 +2,7 @@ import { css } from "@/styled-system/css";
 
 const Footer = () => {
   return (
-    <footer className="content-grid">
+    <footer className='content-grid'>
       <div
         className={css({
           textAlign: "center",
@@ -11,10 +11,13 @@ const Footer = () => {
           py: "4",
           roundedBottom: "lg",
           mb: "4",
-        })}
-      >
-        <hr />
-        <p className={css({ fontSize: "sm", mt: "4" })}>
+        })}>
+        <p
+          className={css({
+            fontSize: "sm",
+            mt: "4",
+            pt: "2",
+          })}>
           © 2023.
           <span className={css({ fontSize: "md", fontWeight: "bold" })}>
             {" "}

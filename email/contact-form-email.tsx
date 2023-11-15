@@ -14,14 +14,14 @@ import {
 } from "@react-email/components";
 
 type ContactFormEmailProps = {
+  senderName: string;
   senderEmail: string;
-  title: string;
   message: string;
 };
 
 export function ContactFormEmail({
   senderEmail,
-  title,
+  senderName,
   message,
 }: ContactFormEmailProps) {
   return (
@@ -33,9 +33,8 @@ export function ContactFormEmail({
           <Container>
             <Section className="bg-white my-10 rounded-md px-10 py-4">
               <Heading className="leading-tight">
-                You received the following message from the contact form
+                You received the following message from {senderName} by the contact form
               </Heading>
-              <Heading as="h2">제목: {title}</Heading>
 
               <Text>내용: {message}</Text>
               <Hr />

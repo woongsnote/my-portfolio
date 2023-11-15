@@ -4,28 +4,36 @@ import { css } from "@/styled-system/css";
 import PageTitle from "@/components/PageTitle";
 
 export default function About() {
+  const techStack: string[] = ["React", "JavaScript", "Next.js", "TypeScript"];
+
+  const techStyle = css({
+    rounded: "md",
+    bgColor: { base: "gray.300", _dark: "gray.600" },
+    color: { base: "black", _dark: "#eee" },
+    px: "2",
+    py: "1",
+  });
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.4 }}
-    >
+      transition={{ duration: 0.4 }}>
       <div className={css({ display: "flex", flexDir: "column" })}>
-        <PageTitle title="About" />
+        <PageTitle title='About' />
         <h2 className={css({ fontSize: "2xl", my: "2" })}>
           안녕하세요, 문지웅입니다.
         </h2>
-        <p className="">
+        <p className=''>
           <span className={css({ fontWeight: "bold" })}>
             새로운 기술에 대한 호기심과 끊임없는 열정을 가지고 있습니다.
           </span>
           <br />
           학습한 지식을 직접 구현한{" "}
           <a
-            href="https://woongsnote.dev"
-            target="_blank"
-            className={css({ fontWeight: "bold" })}
-          >
+            href='https://woongsnote.dev'
+            target='_blank'
+            className={css({ fontWeight: "bold" })}>
             블로그
           </a>
           에 정리하고 공유함으로써 지식 공유에도 기여하고 있습니다.
@@ -43,18 +51,19 @@ export default function About() {
         </p>
       </div>
 
-      <div>
+      <div className={css({ mt: "4" })}>
         <h2 className={css({ fontSize: "2xl", my: "2" })}>My Skills</h2>
-        <ul className={css({ listStyle: "disc", pl: "8" })}>
-          <li>React</li>
-          <li>Next.js</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-        </ul>
+        <p className={css({ display: "flex", gap: "2" })}>
+          {techStack.map((tech) => (
+            <span className={techStyle} key={tech}>
+              {tech}
+            </span>
+          ))}
+        </p>
       </div>
 
-      <div>
-        <h2 className={css({ fontSize: "2xl", my: "2" })}>My Experiences</h2>{" "}
+      <div className={css({ mt: "4" })}>
+        <h2 className={css({ fontSize: "2xl", my: "2" })}>My Education</h2>{" "}
         <ul className={css({ listStyle: "disc", pl: "8" })}>
           <li>React 웹 개발 교육 과정 (수료) | 2022. 08. - 2022. 11. </li>
           <li>정보처리기사 | 2021.06 </li>
