@@ -2,7 +2,7 @@ import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
 
 const globalCss = defineGlobalStyles({
   body: {
-    backgroundColor: "gray.300",
+    backgroundColor: "#fff",
   },
 });
 

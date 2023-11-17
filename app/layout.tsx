@@ -3,9 +3,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Providers } from "./providers";
 import { Toaster } from "react-hot-toast";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import MainLayout from "@/components/MainLayout";
+import { MainLayout } from "@/layouts/main";
+import { Header, Footer } from "@/components/index";
 
 const pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
@@ -25,17 +24,18 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang='ko'
-      className={`${pretendard.variable} scroll-smooth`}
-      suppressHydrationWarning>
+      lang="ko"
+      className={`${pretendard.variable}`}
+      suppressHydrationWarning
+    >
       <body>
         <Providers>
           <Header />
-          <main className='flow content-grid'>
+          <main>
             <MainLayout>{children}</MainLayout>
           </main>
           <Footer />
-          <Toaster position='top-center' />
+          <Toaster position="top-center" />
         </Providers>
       </body>
     </html>
