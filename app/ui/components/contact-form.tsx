@@ -1,19 +1,20 @@
+"use client";
+
 import { sendEmail } from "@/app/actions";
 import { css } from "@/styled-system/css";
-import { SubmitButton } from "../components";
-import toast from "react-hot-toast";
+import { SubmitButton } from "@/components/submit-button";
+import { toast } from "react-hot-toast";
 
 export const ContactForm = () => {
   return (
     <form
       action={async (formData) => {
-        "use server"
         const { data, error } = await sendEmail(formData);
         if (error) {
           toast.error(error);
           return;
         }
-        console.log(data);
+
         toast.success("이메일이 성공적으로 전송되었습니다!");
       }}
       className={css({
@@ -22,6 +23,8 @@ export const ContactForm = () => {
         w: "full",
         p: "4",
         gap: "4",
+        maxW: "4xl",
+        mx: "auto",
       })}
     >
       <div

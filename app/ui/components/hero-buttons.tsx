@@ -18,4 +18,6 @@ const heroButtonsStyle = css({
   flexDir: { base: "column", lg: "row" },
   alignItems: "center",
   justifyContent: "space-evenly",
+  gap: "4",
+  fontSize: { base: "xl", lg: "3xl" },
 });

@@ -1,8 +1,6 @@
 import { css } from "@/styled-system/css";
 
-type PageTitleProps = { title: string };
-
-export const PageTitle = ({ title }: PageTitleProps) => {
+export const SectionTitle = ({ title }: { title: string }) => {
   if (title === "") return;
 
   return (
@@ -10,6 +8,7 @@ export const PageTitle = ({ title }: PageTitleProps) => {
       className={css({
         fontSize: "3xl",
         textAlign: "center",
+        fontWeight: "black",
       })}
     >
       {title}

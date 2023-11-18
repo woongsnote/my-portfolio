@@ -1,5 +1,32 @@
-import { Section } from "@/layouts/section";
+import { css } from "@/styled-system/css";
+import { SectionTitle } from "@/components/section-title";
+import { SkillList } from "../components/skill-list";
+import { Intro } from "../components/intro";
+import { Experience } from "../components/experience";
 
 export const AboutSection = () => {
-  return <Section title={"About Me"}>about</Section>;
+  return (
+    <section className={aboutSectionStyle} id="about">
+      <SectionTitle title="About Me" />
+      <Intro />
+      <SkillList />
+      <Experience />
+    </section>
+  );
 };
+
+const aboutSectionStyle = css({
+  display: "flex",
+  gap: "4",
+  lg: { gap: "8" },
+  alignItems: "center",
+  justifyContent: "center",
+  pt: "20",
+  pb: "20",
+  pl: "2",
+  pr: "2",
+  w: "full",
+  minH: "screen",
+  h: "full",
+  flexDir: "column",
+});

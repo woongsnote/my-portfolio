@@ -1,10 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import profile from "@/app/assets/profile.png";
 import { css } from "@/styled-system/css";
+import { motion } from "framer-motion";
 
 export const ProfileImage = () => {
   return (
-    <div className={profileContainerStyle}>
+    <motion.div
+      className={profileContainerStyle}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.4 }}
+    >
       <Image
         src={profile}
         alt="profile"
@@ -13,7 +21,7 @@ export const ProfileImage = () => {
         priority
         className={imageStyle}
       />
-    </div>
+    </motion.div>
   );
 };
 
@@ -24,8 +32,8 @@ const profileContainerStyle = css({
   mx: "auto",
   p: "4",
   rounded: "full",
-  w: "32",
-  h: "32",
+  w: { base: "32", lg: "48" },
+  h: { base: "32", lg: "48" },
   border: "4px solid #e5e7eb",
 });
 

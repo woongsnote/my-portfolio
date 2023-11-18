@@ -4,7 +4,9 @@ import localFont from "next/font/local";
 import { Providers } from "./providers";
 import { Toaster } from "react-hot-toast";
 import { MainLayout } from "@/layouts/main";
-import { Header, Footer } from "@/components/index";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 const pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
@@ -31,10 +33,9 @@ export default function RootLayout({
       <body>
         <Providers>
           <Header />
-          <main>
-            <MainLayout>{children}</MainLayout>
-          </main>
+          <MainLayout>{children}</MainLayout>
           <Footer />
+          <ThemeSwitcher />
           <Toaster position="top-center" />
         </Providers>
       </body>

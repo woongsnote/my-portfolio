@@ -1,17 +1,15 @@
 "use server";
 
-import { getErrorMessage, validateString } from "@/lib/utils";
+import { getErrorMessage, validateString } from "@/utils/index";
 import { Resend } from "resend";
-import { EmailTemplate } from "@/components/EmailTemplate";
+import { EmailTemplate } from "@/components/email-template";
 import { renderAsync } from "@react-email/render";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmail(formData: FormData) {
   const senderName = formData.get("senderName");
-
   const senderEmail = formData.get("senderEmail");
-
   const message = formData.get("message");
 
   if (!validateString(senderEmail, 500)) {
