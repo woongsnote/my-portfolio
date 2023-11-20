@@ -15,6 +15,17 @@ const projects: Project[] = [
     category: "Personal",
   },
   {
+    title: "포트폴리오",
+    description: "ContentLayer 블로그 구현을 위한 템플릿",
+    tech: ["Next.js", "ContentLayer"],
+    image: "/mdx-template.png",
+    githubLink: "https://github.com/woongsnote/mdx-blog",
+    slug: "mdx-blog-template",
+    link: "",
+    releaseDate: "2023-08-15",
+    category: "Personal",
+  },
+  {
     title: "MDX Blog Template",
     description: "ContentLayer 블로그 구현을 위한 템플릿",
     tech: ["Next.js", "ContentLayer"],
@@ -38,9 +49,12 @@ export const ProjectList = () => {
 };
 
 const projectListStyle = css({
-  display: "flex",
-  flexWrap: "wrap",
-  mt: "4",
   w: "full",
+  display: "flex",
+  alignItems: "start",
+  justifyContent: { base: "center", lg: "space-between" },
+  mx: "auto",
   gap: "4",
+  mt: "4",
+  flexWrap: "wrap",
 });

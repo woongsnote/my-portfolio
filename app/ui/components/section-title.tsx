@@ -4,7 +4,7 @@ export const SectionTitle = ({ title }: { title: string }) => {
   if (title === "") return;
 
   return (
-    <h2
+    <h1
       className={css({
         fontSize: "3xl",
         textAlign: "center",
@@ -12,6 +12,6 @@ export const SectionTitle = ({ title }: { title: string }) => {
       })}
     >
       {title}
-    </h2>
+    </h1>
   );
 };

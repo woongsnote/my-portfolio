@@ -90,8 +90,11 @@ const socialLinkStyle = css({
 const helperTextStyle = css({
   pos: "absolute",
   zIndex: 20,
-  top: 14,
+  top: 16,
   fontSize: "xs",
   scale: 0,
   _groupHover: { scale: 1 },
+  border: { base: "1px solid black", _dark: "1px solid white" },
+  p: "2",
+  rounded: "lg",
 });

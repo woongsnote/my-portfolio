@@ -8,11 +8,14 @@ const skills = [
 ];
 export const SkillList = () => {
   return (
-    <div className={skillListStyle}>
-      {skills.map((skill) => (
-        <SkillCard key={skill.title} />
-      ))}
-    </div>
+    <>
+      <h2>My Skills</h2>
+      <div className={skillListStyle}>
+        {skills.map((skill) => (
+          <SkillCard key={skill.title} />
+        ))}
+      </div>
+    </>
   );
 };
 
@@ -20,7 +23,7 @@ const skillListStyle = css({
   w: "full",
   display: "flex",
   alignItems: "center",
-  justifyContent: "center",
+  justifyContent: "space-between",
   mx: "auto",
   gap: "3",
 });

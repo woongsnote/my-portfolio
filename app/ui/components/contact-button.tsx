@@ -21,4 +21,5 @@ const contactButtonStyle = css({
   color: "white",
   rounded: "full",
   w: { base: "full", lg: "fit" },
+  shadow: "lg",
 });

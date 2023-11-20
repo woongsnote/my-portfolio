@@ -22,4 +22,5 @@ const downloadButtonStyle = css({
   rounded: "full",
   _hover: { bgColor: { base: "pink.500", _dark: "purple.600" } },
   w: { base: "full", lg: "fit" },
+  shadow: "lg",
 });

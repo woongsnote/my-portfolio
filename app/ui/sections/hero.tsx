@@ -10,7 +10,7 @@ export const HeroSection = () => {
       <div className={infoStyle}>
         <HeroTitle />
         <p className={descriptionStyle}>
-          새로운 기술을 학습하는 것을 즐기는 개발자 <b>문지웅</b>입니다.
+          새로운 기술을 학습하고 적용하는 것을 즐기는 개발자 <b>문지웅</b>입니다.
         </p>
         <HeroButtons />
       </div>

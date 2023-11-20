@@ -13,8 +13,14 @@ export const ProjectsSection = () => {
 
 const projectsSectionStyle = css({
   display: "flex",
-  flexDir: "column",
-  minH: "screen",
+  gap: "4",
+  lg: { gap: "8" },
   alignItems: "center",
-  justifyContent: "center",
+  justifyContent: "start",
+  py: "20",
+  px: "2",
+  w: "full",
+  minH: "screen",
+  h: "full",
+  flexDir: "column",
 });
