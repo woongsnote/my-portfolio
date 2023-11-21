@@ -15,7 +15,7 @@ const Template = ({ children }: { children: React.ReactNode }) => {
         initial='hidden'
         animate='enter'
         transition={{ type: "linear", delay: 0.2, duration: 0.4 }}
-        className='container min-h-screen relative py-4'>
+        className='container min-h-screen relative'>
         {children}
       </motion.main>
     </>

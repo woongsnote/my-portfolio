@@ -2,10 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
-// components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 const pretendard = localFont({

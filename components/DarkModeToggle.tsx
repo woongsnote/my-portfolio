@@ -20,8 +20,12 @@ const DarkModeToggle = () => {
   };
 
   return (
-    <Button onClick={changeTheme}>
-      {currentTheme === "dark" ? <BsSunFill /> : <BsMoonFill />}
+    <Button onClick={changeTheme} className="w-10 h-10 p-2">
+      {currentTheme === "dark" ? (
+        <BsSunFill size={18} />
+      ) : (
+        <BsMoonFill size={18} />
+      )}
     </Button>
   );
 };
