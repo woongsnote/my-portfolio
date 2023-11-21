@@ -16,6 +16,7 @@ export const ContactForm = () => {
         }
 
         toast.success("이메일이 성공적으로 전송되었습니다!");
+        
       }}
       className={css({
         display: "flex",
@@ -23,7 +24,7 @@ export const ContactForm = () => {
         w: "full",
         p: "4",
         gap: "4",
-        maxW: "4xl",
+        maxW: "3xl",
         mx: "auto",
       })}
     >

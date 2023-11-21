@@ -1,17 +1,9 @@
-import {
-  AboutSection,
-  ProjectsSection,
-  ContactSection,
-  HeroSection,
-} from "./ui/sections";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
     <>
-      <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
-      <ContactSection />
+      <Hero />
     </>
   );
 }

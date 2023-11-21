@@ -59,6 +59,6 @@ const navbarStyle = css({
 });
 
 const linkStyle = css({
-  fontSize: { base: "lg", lg: "2xl" },
+  fontSize: { base: "lg", lg: "xl" },
   _hover: { color: "blue.500" },
 });

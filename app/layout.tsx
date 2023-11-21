@@ -1,12 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Providers } from "./providers";
 import { Toaster } from "react-hot-toast";
-import { MainLayout } from "@/layouts/main";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-import { ThemeSwitcher } from "@/components/theme-switcher";
+// components
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const pretendard = localFont({
   src: "./fonts/PretendardVariable.woff2",
@@ -26,18 +26,16 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="ko"
+      lang='ko'
       className={`${pretendard.variable}`}
-      suppressHydrationWarning
-    >
+      suppressHydrationWarning>
       <body>
-        <Providers>
+        <ThemeProvider>
           <Header />
-          <MainLayout>{children}</MainLayout>
+          {children}
           <Footer />
-          <ThemeSwitcher />
-          <Toaster position="top-center" />
-        </Providers>
+          <Toaster position='top-right' />
+        </ThemeProvider>
       </body>
     </html>
   );

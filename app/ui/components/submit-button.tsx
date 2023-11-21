@@ -21,7 +21,7 @@ export const SubmitButton = () => {
 
 const SubmitButtonStyle = css({
   w: "full",
-  bgColor: { base: "black", _dark: "#404040", _disabled: "gray.800" },
+  bgColor: { base: "blue.500", _dark: "#404040", _disabled: "gray.800" },
   color: "white",
   rounded: "lg",
   py: "2",

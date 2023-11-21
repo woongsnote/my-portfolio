@@ -1,29 +1,35 @@
 import { css } from "@/styled-system/css";
-import { SkillCard } from "./skill-card";
 
-const skills = [
-  { title: "", description: "" },
-  { title: "", description: "" },
-  { title: "", description: "" },
+const skills: string[] = [
+  "React로 구현한 프로젝트를 기획부터 운영까지 해 본 경험이 있습니다.",
+  "Next.js 프레임워크를 사용해서 프로젝트를 구현한 경험이 있습니다.",
 ];
 export const SkillList = () => {
   return (
     <>
-      <h2>My Skills</h2>
-      <div className={skillListStyle}>
+      <h2 className={subTitle}>My Skills</h2>
+
+      <ul className={skillListStyle}>
         {skills.map((skill) => (
-          <SkillCard key={skill.title} />
+          <li key={skill}>{skill}</li>
         ))}
-      </div>
+      </ul>
     </>
   );
 };
 
 const skillListStyle = css({
-  w: "full",
+  w: "fit",
   display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
+  flexDir: "column",
+  textAlign: "start",
+  justifyContent: "center",
   mx: "auto",
   gap: "3",
+  listStyleType: "disc",
+});
+
+const subTitle = css({
+  fontWeight: "bold",
+  fontSize: { base: "lg", xl: "2xl" },
 });

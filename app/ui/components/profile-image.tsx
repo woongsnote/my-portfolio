@@ -7,7 +7,7 @@ export const ProfileImage = () => {
     <div className={profileContainerStyle}>
       <Image
         src={profile}
-        alt="profile"
+        alt='profile'
         width={100}
         height={100}
         priority
@@ -24,8 +24,8 @@ const profileContainerStyle = css({
   mx: "auto",
   p: "4",
   rounded: "full",
-  w: { base: "32", lg: "48" },
-  h: { base: "32", lg: "48" },
+  w: "32",
+  h: "32",
   border: "4px solid #e5e7eb",
   shadow: "md",
 });

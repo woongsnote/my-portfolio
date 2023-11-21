@@ -14,3 +14,8 @@ export type PageLinkProps = {
   link: string;
   githubLink: string;
 };
+
+export type NavLink = {
+  title: string;
+  href: string;
+};

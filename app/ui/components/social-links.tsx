@@ -58,7 +58,7 @@ export const SocialLinks = () => {
     <ul className={socialLinksStyle}>
       {SocialLinkItems.map((item) => (
         <li key={item.title} className={`group ${socialLinkStyle}`}>
-          <a href={item.href} target="_blank">
+          <a href={item.href} target='_blank'>
             {item.icon}
           </a>
           <span className={helperTextStyle}>{item.title}</span>
@@ -90,11 +90,10 @@ const socialLinkStyle = css({
 const helperTextStyle = css({
   pos: "absolute",
   zIndex: 20,
-  top: 16,
+  top: 12,
   fontSize: "xs",
   scale: 0,
   _groupHover: { scale: 1 },
-  border: { base: "1px solid black", _dark: "1px solid white" },
   p: "2",
   rounded: "lg",
 });

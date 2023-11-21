@@ -3,18 +3,21 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prepare": "panda codegen",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "@react-email/button": "0.0.11",
     "@react-email/components": "^0.0.11",
     "@react-email/html": "0.0.6",
     "@react-email/render": "0.0.9",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
     "framer-motion": "^10.16.5",
+    "lucide-react": "^0.292.0",
     "next": "^14.0.3",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
@@ -23,17 +26,21 @@
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.12.0",
     "react-type-animation": "^3.2.0",
-    "resend": "^2.0.0"
+    "resend": "^2.0.0",
+    "tailwind-merge": "^2.0.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@pandacss/dev": "^0.18.3",
     "@types/node": "20.9.1",
     "@types/react": "18.2.37",
     "@types/react-dom": "18.2.15",
+    "autoprefixer": "^10.4.16",
     "encoding": "^0.1.13",
     "eslint": "8.53.0",
     "eslint-config-next": "14.0.3",
+    "postcss": "^8.4.31",
     "sharp": "^0.32.6",
+    "tailwindcss": "^3.3.5",
     "typescript": "5.2.2"
   }
 }

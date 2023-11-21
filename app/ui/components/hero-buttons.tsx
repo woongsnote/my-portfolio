@@ -19,5 +19,5 @@ const heroButtonsStyle = css({
   alignItems: "center",
   justifyContent: "space-evenly",
   gap: "4",
-  fontSize: { base: "xl", lg: "3xl" },
+  fontSize: { base: "lg", lg: "2xl" },
 });
