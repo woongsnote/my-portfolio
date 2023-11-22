@@ -3,7 +3,6 @@
 import { NavLink } from "@/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 
 type NavProps = {
   containerStyle: string;
@@ -19,7 +18,6 @@ const links: NavLink[] = [
 
 const Nav = ({ containerStyle, linkStyle, underlineStyle }: NavProps) => {
   const path = usePathname();
-  console.log(path);
 
   return (
     <nav className={`${containerStyle}`}>

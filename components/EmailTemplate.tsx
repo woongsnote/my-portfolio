@@ -1,4 +1,3 @@
-import { css } from "@/styled-system/css";
 import {
   Body,
   Container,
@@ -20,31 +19,24 @@ export const EmailTemplate = ({
   senderEmail,
   message,
 }: EmailProps) => {
-  const main = css({ bgColor: "gray.200" });
-  const container = css({
-    mx: "auto",
-    padding: "20px 0 48px",
-    bgColor: "white",
-  });
-  const paragraph = css({ fontSize: "lg", lineHeight: "md" });
   return (
     <Html>
       <Head />
       <Preview>New message from your portfolio site</Preview>
-      <Body className={main}>
-        <Container className={container}>
+      <Body className='bg-gray-200'>
+        <Container className='bg-white mx-auto pt-10 pb-4 px-12'>
           <Heading>
             You received the following message from {senderName} by the contact
             form
           </Heading>
-          <Text className={paragraph}>{message}</Text>
-          <Text className={paragraph}>
+          <Text className='text-lg leading-5'>{message}</Text>
+          <Text className='text-lg leading-5'>
             From,
             <br />
             {senderName}
           </Text>
           <hr />
-          <Text className={paragraph}>
+          <Text className='text-lg leading-5'>
             The sender&apos;s email is: {senderEmail}
           </Text>
         </Container>

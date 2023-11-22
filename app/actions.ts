@@ -2,7 +2,7 @@
 
 import { getErrorMessage, validateString } from "@/utils/index";
 import { Resend } from "resend";
-import { EmailTemplate } from "@/components/email-template";
+import { EmailTemplate } from "@/components/EmailTemplate";
 import { renderAsync } from "@react-email/render";
 
 const resend = new Resend(process.env.RESEND_API_KEY);

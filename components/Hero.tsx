@@ -14,12 +14,12 @@ import Socials from "./Socials";
 const Hero = () => {
   return (
     <section className="py-12 lg:py-28 lg:min-h-screen h-full flex flex-col gap-x-8 flex-grow relative">
-      <div className="flex justify-between gap-x-12">
-        <div>
+      <div className="flex justify-center gap-x-8">
+        <div className="flex w-full lg:max-w-xl flex-col justify-center mx-auto xl:mx-0">
           <span className="uppercase text-primary font-black">
             Web Developer
           </span>
-          <h1 className="mb-4 text-3xl lg:text-6xl font-black text-start drop-shadow-lg">
+          <h1 className="mb-4 text-3xl lg:text-5xl font-black text-start drop-shadow-lg">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">
               Hello, I&apos;m{" "}
             </span>

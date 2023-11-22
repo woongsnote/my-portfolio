@@ -19,3 +19,21 @@ export type NavLink = {
   title: string;
   href: string;
 };
+
+export type Info = {
+  icon: React.ReactNode;
+  text: string;
+};
+
+export type Experience = {
+  company: string;
+  years: string;
+  role: string;
+};
+
+export type Education = {
+  university?: string;
+  company?: string;
+  qualification: string;
+  years: string;
+};
