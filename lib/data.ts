@@ -31,7 +31,7 @@ export const ExperienceData: Experience[] = [
   },
 ];
 
-export const Projects: Project[] = [
+export const ProjectsData: Project[] = [
   {
     title: "Tech Blog",
     description:
@@ -42,7 +42,7 @@ export const Projects: Project[] = [
     slug: "tech-blog",
     link: "",
     releaseDate: "2023-04-07",
-    category: "Personal",
+    category: "Next.js",
   },
   {
     title: "Mini Pick",
@@ -53,7 +53,7 @@ export const Projects: Project[] = [
     slug: "mini-pick",
     link: "",
     releaseDate: "2023-08-30",
-    category: "Personal",
+    category: "Next.js",
   },
   {
     title: "MDX Blog Template",
@@ -64,7 +64,7 @@ export const Projects: Project[] = [
     slug: "mdx-blog-template",
     link: "",
     releaseDate: "2023-08-15",
-    category: "Personal",
+    category: "Next.js",
   },
   {
     title: "Toodos",
@@ -75,7 +75,7 @@ export const Projects: Project[] = [
     slug: "toodos",
     link: "",
     releaseDate: "2023-05-23",
-    category: "Team",
+    category: "React",
   },
   {
     title: "Movie Critic",
@@ -86,7 +86,7 @@ export const Projects: Project[] = [
     slug: "movie-critic",
     link: "",
     releaseDate: "2022-10-22",
-    category: "Team",
+    category: "React",
   },
   {
     title: "Book Book",
@@ -97,7 +97,7 @@ export const Projects: Project[] = [
     slug: "book-book",
     link: "",
     releaseDate: "2022-09-11",
-    category: "Team",
+    category: "React",
   },
 ];
 

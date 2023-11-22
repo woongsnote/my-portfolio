@@ -7,7 +7,7 @@ export type Project = {
   githubLink: string;
   releaseDate: string;
   slug: string;
-  category: "Team" | "Personal";
+  category: string;
 };
 
 export type PageLinkProps = {
