@@ -48,14 +48,14 @@ const Hero = () => {
                 Contact me <RiSendPlaneFill size={18} />
               </Button>
             </Link>
-            <Link href="/CV.pdf" className="flex items-center">
+            <a href="/CV.pdf" className="flex items-center">
               <Button
                 variant="secondary"
                 className="gap-x-2 text-lg mx-auto w-full hover:shadow-xl"
               >
                 Download CV <RiDownloadLine size={18} />
               </Button>
-            </Link>
+            </a>
           </div>
           <Socials />
         </div>

@@ -14,7 +14,6 @@ import {
   ExperienceData as experience,
   SkillsData as skills,
 } from "@/lib/data";
-import { Badge } from "./ui/badge";
 
 const InfoData = [
   { icon: <RiUser3Fill />, text: "문지웅" },
@@ -27,8 +26,8 @@ const About = () => {
   return (
     <section className='flex flex-col py-20 px-2 w-full gap-y-6'>
       <h2 className='text-3xl lg:text-5xl text-center font-black'>About Me</h2>
-      <div className='flex'>
-        <div className='hidden lg:flex flex-1 items-center justify-center justify-self-center'>
+      <div className='flex justify-center'>
+        <div className='hidden lg:flex flex-1 items-center justify-center'>
           <Image
             src={"/about-image.png"}
             alt='About Image'
@@ -54,7 +53,7 @@ const About = () => {
             <div className='mt-20 xl:mt-8'>
               <TabsContent value='personal'>
                 <div className='text-start'>
-                  <p className='keep-all mt-2'>
+                  <p className='break-keep mt-2'>
                     <b>
                       새로운 기술에 대한 호기심과 끊임없는 열정을 가지고
                       있습니다.
