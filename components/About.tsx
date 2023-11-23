@@ -15,6 +15,8 @@ import {
   SkillsData as skills,
 } from "@/lib/data";
 
+import SectionTitle from "./SectionTitle";
+
 const InfoData = [
   { icon: <RiUser3Fill />, text: "문지웅" },
   { icon: <RiMailFill />, text: "woongsnote@gmail.com" },
@@ -25,7 +27,7 @@ const Tools: string[] = ["VsCode", "Notion", "Slack"];
 const About = () => {
   return (
     <section className='flex flex-col py-20 px-2 w-full gap-y-6'>
-      <h2 className='text-3xl lg:text-5xl text-center font-black'>About Me</h2>
+      <SectionTitle title='About Me' />
       <div className='flex justify-center'>
         <div className='hidden lg:flex flex-1 items-center justify-center'>
           <Image

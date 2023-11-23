@@ -1,24 +1,34 @@
+"use client";
+
 import type { Project } from "@/types";
 import Image from "next/image";
+import { Card, CardHeader } from "./ui/card";
+import { Badge } from "./ui/badge";
 const ProjectCard = ({ project }: { project: Project }) => {
-  const { title, tech, image, category, description } = project;
+  const { title, image, category, description } = project;
 
   return (
-    <div className="w-full mx-auto flex flex-col bg-accent p-2 h-80 rounded-lg">
-      <div className="flex items-center mx-auto p-2">
-        <Image
-          src={image}
-          alt="title"
-          width={800}
-          height={480}
-          className="w-full h-full object-cover rounded-md max-w-xs"
-        />
+    <Card className='p-0 h-full overflow-hidden max-h-80'>
+      <CardHeader className='bg-accent'>
+        <div className='relative w-full h-40 flex items-center justify-center p-4'>
+          <Image
+            src={image}
+            alt={title}
+            width={200}
+            height={120}
+            className='absolute bottom-0 shadow-2xl w-auto rounded-md object-center h-auto max-h-32'
+            priority
+          />
+        </div>
+      </CardHeader>
+      <div className='px-8 py-4'>
+        <Badge className='text-sm  font-medium mb-2 absolute top-4 left-5'>
+          {category}
+        </Badge>
+        <h4 className='text-2xl font-bold mb-1'>{title}</h4>
+        <p className='text-muted-foreground break-keep pb-2'>{description}</p>
       </div>
-      <div>
-        <h2 className="font-bold">{title}</h2>
-        <p className="break-keep">{description}</p>
-      </div>
-    </div>
+    </Card>
   );
 };
 
