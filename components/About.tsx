@@ -45,18 +45,18 @@ const About = () => {
         </div>
         <div className='flex-1'>
           <Tabs defaultValue='personal'>
-            <TabsList className='w-full grid xl:grid-cols-3 xl:max-w-xl xl:border rounded-full h-12 items-center dark:border-none'>
-              <TabsTrigger className='w-48 xl:w-auto' value='personal'>
+            <TabsList className='w-full grid lg:grid-cols-3 lg:max-w-xl xl:border rounded-full h-12 items-center dark:border-none'>
+              <TabsTrigger className='w-48 lg:w-auto' value='personal'>
                 Personal Info
               </TabsTrigger>
-              <TabsTrigger className='w-48 xl:w-auto' value='qualifications'>
+              <TabsTrigger className='w-48 lg:w-auto' value='qualifications'>
                 Qualifications
               </TabsTrigger>
-              <TabsTrigger className='w-48 xl:w-auto' value='skills'>
+              <TabsTrigger className='w-48 lg:w-auto' value='skills'>
                 Skills
               </TabsTrigger>
             </TabsList>
-            <div className='mt-20 xl:mt-8'>
+            <div className='mt-20 lg:mt-8'>
               <TabsContent value='personal'>
                 <div className='text-start'>
                   <p className='break-keep mt-2'>
@@ -92,7 +92,7 @@ const About = () => {
                   <h3 className='text-center font-bold text-2xl mb-4'>
                     My Awesome Journey
                   </h3>
-                  <div className='grid md:grid-cols-2 gap-4'>
+                  <div className='grid xl:grid-cols-2 gap-4'>
                     <div>
                       <div className='flex text-primary gap-x-4 items-center text-lg'>
                         <RiBriefcase5Line />

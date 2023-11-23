@@ -9,9 +9,9 @@ const GITHUB_URL = "https://github.com/woongsnote";
 const ProjectCard = ({ project }: { project: Project }) => {
   const { title, image, category, description, tech, githubRepo } = project;
   const githubUrl = `${GITHUB_URL}${githubRepo}`;
-  console.log(githubUrl);
+  
   return (
-    <Card className='p-0 overflow-hidden w-full h-full xl:max-h-96 max-w-sm hover:shadow-lg'>
+    <Card className='p-0 overflow-hidden w-full h-full xl:max-h-96 max-w-sm hover:shadow-lg hover:scale-110 transition-all'>
       <CardHeader className='bg-secondary'>
         <div className='relative w-full h-40 flex items-center justify-center p-4'>
           <Image
@@ -28,8 +28,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <Badge className='text-sm font-medium mb-2 absolute top-4 left-5'>
           {category}
         </Badge>
-        <h4 className='text-2xl font-bold mb-1'>{title}</h4>
-        <p className='text-muted-foreground break-keep pb-2 text-sm'>
+        <h4 className='text-2xl font-bold'>{title}</h4>
+        <p className='text-muted-foreground break-keep text-sm'>
           {description}
         </p>
         <div className='flex flex-wrap gap-2'>

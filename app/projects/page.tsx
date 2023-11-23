@@ -33,7 +33,7 @@ export default function Projects() {
               </TabsTrigger>
             ))}
           </TabsList>
-          <div className='text-lg xl:mt-8 grid lg:grid-cols-3 gap-4'>
+          <div className='text-lg xl:mt-8 grid lg:grid-cols-3 gap-8'>
             {filteredProjects.map((project) => {
               return (
                 <TabsContent value={category} key={project.title}>
