@@ -9,17 +9,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 import SectionTitle from "./SectionTitle";
 
-const MAX_PROJECTS = 3;
+const MAX_PROJECTS = 4;
 const latestProjects = ProjectsData.slice(0, MAX_PROJECTS);
 
 const Projects = () => {
   return (
-    <section className='flex flex-col xl:flex-row mb-12 items-center justify-center relative w-full'>
+    <section className='flex flex-col lg:flex-row mb-12 items-center justify-center relative w-full min-h-screen h-full'>
       <div className='w-full max-w-md mx-auto xl:mx-0 text-center xl:text-start mb-12 flex flex-col gap-y-4'>
         <SectionTitle title='Latest Projects' />
         <p className='mb-4 break-keep'>
@@ -30,13 +31,13 @@ const Projects = () => {
           <Button>All Projects</Button>
         </Link>
       </div>
-      <div className='xl:max-w-3xl'>
+      <div className='w-full xl:max-w-3xl '>
         <Swiper
-          className='h-96'
+          className='xl:h-[440px]'
           slidesPerView={1}
           breakpoints={{ 640: { slidesPerView: 2 } }}
           spaceBetween={32}
-          modules={[Pagination]}
+          modules={[Pagination, Navigation]}
           pagination={{ clickable: true }}>
           {latestProjects.map((project) => (
             <SwiperSlide key={project.title} className=''>

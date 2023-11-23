@@ -3,10 +3,9 @@ export type Project = {
   tech: string[];
   image: string;
   description: string;
-  link: string;
-  githubLink: string;
-  releaseDate: string;
-  slug: string;
+  link?: string;
+  reviewLink: string;
+  githubRepo: string;
   category: string;
 };
 

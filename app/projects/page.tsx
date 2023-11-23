@@ -22,7 +22,7 @@ export default function Projects() {
       <PageTitle title='My Projects' />
       <div className='w-full mx-auto'>
         <Tabs defaultValue='All'>
-          <TabsList className='w-full h-full grid md:grid-cols-3 lg:max-w-3xl mb-12 mx-auto md:border dark:border-none'>
+          <TabsList className='w-full h-full grid md:grid-cols-3 lg:max-w-3xl mb-12 mx-auto md:border rounded-full dark:border-none'>
             {uniqueCategories.map((category) => (
               <TabsTrigger
                 value={category}
@@ -37,7 +37,7 @@ export default function Projects() {
             {filteredProjects.map((project) => {
               return (
                 <TabsContent value={category} key={project.title}>
-                  <div className='relative h-96'>
+                  <div className='relative'>
                     <ProjectCard project={project} />
                   </div>
                 </TabsContent>

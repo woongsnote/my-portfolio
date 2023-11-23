@@ -4,30 +4,30 @@ export const EducationData: Education[] = [
   {
     company: "팀스파르타",
     qualification: "React 웹 개발 교육",
-    years: "2022",
+    years: "2022.08 - 2022.11",
   },
   {
     university: "한국산업기술대학교",
     qualification: "전자공학과",
-    years: "2011-2017",
+    years: "2011.03 - 2017.02",
   },
 ];
 
 export const ExperienceData: Experience[] = [
   {
-    company: "ABC",
-    years: "2020-2021",
-    role: "engineer",
+    company: "피노스토리",
+    years: "2020.08 - 2021.07",
+    role: "기업 부설 연구소 / 연구원",
   },
   {
-    company: "E",
-    years: "2019",
-    role: "engineer",
+    company: "에프티랩",
+    years: "2019.04 - 2019.11",
+    role: "기업 부설 연구소 / 연구원",
   },
   {
-    company: "F",
-    years: "2017",
-    role: "engineer",
+    company: "아이엠티에스",
+    years: "2017.02 - 2017.09",
+    role: "기업 부설 연구소 / 연구원",
   },
 ];
 
@@ -38,10 +38,18 @@ export const ProjectsData: Project[] = [
       "개발 관련 학습한 지식을 기록하고, 공유하기 위해 구현한 블로그",
     tech: ["Astro", "TypeScript", "TailwindCSS"],
     image: "/tech-blog.png",
-    githubLink: "https://github.com/woongsnote/woongsnote-dev",
-    slug: "tech-blog",
+    githubRepo: "/woongsnote-dev",
+    reviewLink: "https://www.woongsnote.dev/blog/230101-why-make-tech-blog",
+    category: "Next.js",
+  },
+  {
+    title: "QR Quasar",
+    description: "Text를 입력해서, QR Code를 생성하고 저장할 수 있는 서비스",
+    tech: ["Next.js", "TypeScript"],
+    image: "/qr-code.png",
+    githubRepo: "/qr-quasar",
     link: "",
-    releaseDate: "2023-04-07",
+    reviewLink: "https://www.woongsnote.dev/blog/230911-qr-code-generator",
     category: "Next.js",
   },
   {
@@ -49,43 +57,41 @@ export const ProjectsData: Project[] = [
     description: "블로그 포스팅에 들어갈 섬네일을 빠르게 생성할 수 있는 서비스",
     tech: ["Next.js", "TypeScript"],
     image: "/mini-pick.png",
-    githubLink: "https://github.com/woongsnote/image-generator",
-    slug: "mini-pick",
+    githubRepo: "/image-generator",
     link: "",
-    releaseDate: "2023-08-30",
+    reviewLink: "",
     category: "Next.js",
   },
+
   {
     title: "MDX 블로그 템플릿",
     description: "ContentLayer 블로그를 구현할 수 있는 기본 템플릿",
     tech: ["Next.js", "ContentLayer"],
     image: "/mdx-template.png",
-    githubLink: "https://github.com/woongsnote/mdx-blog",
-    slug: "mdx-blog-template",
+    githubRepo: "/contentlayer-blog-template",
     link: "",
-    releaseDate: "2023-08-15",
+    reviewLink: "",
     category: "Next.js",
   },
   {
     title: "방구석 평론가",
-    description: "영화 정보를 검색하고, 관람한 영화 및 영화관의 후기를 남길 수 있는 커뮤니티 서비스",
+    description:
+      "영화 정보 검색 및 관람한 영화, 영화관 후기를 작성할 수 있는 커뮤니티",
     tech: ["React", "JavaScript"],
     image: "/movie-critic.png",
-    githubLink: "https://github.com/woongsnote/movie-critic-fe",
-    slug: "movie-critic",
+    githubRepo: "/movie-critic-fe",
     link: "",
-    releaseDate: "2022-10-22",
+    reviewLink: "",
     category: "React",
   },
   {
     title: "북적북적",
-    description: "읽은 책의 후기를 작성할 수 있는 서비스",
+    description: "읽은 책에 관한 후기를 작성할 수 있는 서비스",
     tech: ["React", "JavaScript"],
     image: "/book-book.png",
-    githubLink: "https://github.com/woongsnote/bookbook-fe",
-    slug: "book-book",
+    githubRepo: "/bookbook-fe",
     link: "",
-    releaseDate: "2022-09-11",
+    reviewLink: "",
     category: "React",
   },
 ];
@@ -94,10 +100,10 @@ export const SkillsData = [
   {
     title: "React",
     description:
-      "CRA 나 Vite, Next.js 등의 프레임워크를 사용해서 웹사이트 구현 가능.",
+      "CRA 나 Vite, Next.js 등의 프레임워크를 사용해서 웹사이트를 구현할 수 있습니다.",
   },
   {
     title: "CSS Framework",
-    description: "TailwindCSS, Styled Component 등을 사용한 경험 있음.",
+    description: "TailwindCSS, Styled Component 등을 사용할 수 있습니다.",
   },
 ];

@@ -4,7 +4,9 @@ import Image from "next/image";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "./ui/tabs";
 import {
   RiBriefcase5Line,
+  RiGithubFill,
   RiGraduationCapFill,
+  RiInstagramLine,
   RiMailFill,
   RiUser3Fill,
 } from "react-icons/ri";
@@ -20,6 +22,8 @@ import SectionTitle from "./SectionTitle";
 const InfoData = [
   { icon: <RiUser3Fill />, text: "문지웅" },
   { icon: <RiMailFill />, text: "woongsnote@gmail.com" },
+  { icon: <RiGithubFill />, text: "woongsnote" },
+  { icon: <RiInstagramLine />, text: "@woongsnote" },
 ];
 
 const Tools: string[] = ["VsCode", "Notion", "Slack"];
