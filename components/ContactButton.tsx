@@ -1,11 +1,13 @@
 import Link from "next/link";
-import { RiArrowRightLine } from "react-icons/ri";
+import { Button } from "./ui/button";
+import { RiSendPlaneFill } from "react-icons/ri";
+
 const ContactButton = () => {
   return (
-    <Link
-      href="#contact"
-      className="px-6 py-3 w-full lg:w-fit flex flex-row items-center justify-center text-center gap-2 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white">
-      Contact Me <RiArrowRightLine />
+    <Link href='/contact' className='flex items-center'>
+      <Button className='gap-x-2 text-lg mx-auto w-full hover:shadow-xl'>
+        연락하기 <RiSendPlaneFill size={18} />
+      </Button>
     </Link>
   );
 };

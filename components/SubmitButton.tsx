@@ -1,26 +1,22 @@
-import { Button } from "@nextui-org/react";
+"use client";
+
+import { useFormStatus } from "react-dom";
 import { BsSend } from "react-icons/bs";
-import { experimental_useFormStatus as useFormStatus } from "react-dom";
+import { Button } from "./ui/button";
 
-export default function SubmitButton() {
+const SubmitButton = () => {
   const { pending } = useFormStatus();
-
   return (
-    <Button
-      color="primary"
-      variant="shadow"
-      type="submit"
-      className="mt-4 disabled:bg-gray-500 w-full"
-      isLoading={pending}
-      isDisabled={pending}>
+    <Button type='submit' disabled={pending}>
       {pending ? (
-        <>전송중</>
+        "전송 중입니다..."
       ) : (
         <>
-          보내기
-          <BsSend />
+          보내기 <BsSend />
         </>
       )}
     </Button>
   );
-}
+};
+
+export default SubmitButton;

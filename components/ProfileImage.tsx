@@ -1,15 +1,15 @@
 import Image from "next/image";
-
+import profile from "@/app/assets/profile.png";
 const ProfileImage = () => {
   return (
-    <div className="flex items-center justify-center mx-auto p-4 border-4 border-double rounded-full w-32 h-32">
+    <div className="hidden relative md:flex w-full max-w-xs overflow-hidden rounded-full p-4 mx-auto my-4 dark:border-secondary lg:mx-0 bg-accent">
       <Image
-        src={"/profile.png"}
+        src={profile}
         alt="profile"
-        width={100}
-        height={100}
+        width={300}
+        height={300}
         priority
-        className="w-auto h-auto self-center"
+        className="w-full h-full"
       />
     </div>
   );

@@ -1,17 +1,15 @@
-import {
-  AboutSection,
-  ContactSection,
-  HeroSection,
-  ProjectsSection,
-} from "@/components";
+import About from "@/components/About";
+import Cta from "@/components/Cta";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
     <>
-      <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
-      <ContactSection />
+      <Hero />
+      <About />
+      <Projects />
+      <Cta />
     </>
   );
 }

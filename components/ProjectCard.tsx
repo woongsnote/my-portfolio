@@ -1,50 +1,68 @@
-import { AiOutlineGithub } from "react-icons/ai";
-import { PROJECTS } from "@/lib/data";
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Chip,
-  Image,
-} from "@nextui-org/react";
+"use client";
 
-type ProjectCardProps = (typeof PROJECTS)[number];
+import type { Project } from "@/types";
+import Image from "next/image";
+import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
+import { Badge } from "./ui/badge";
+import { RiGithubFill, RiLinksLine } from "react-icons/ri";
+import Link from "next/link";
+import { Button } from "./ui/button";
 
-const ProjectCard = ({
-  image,
-  title,
-  description,
-  tags,
-  githubUrl,
-}: ProjectCardProps) => {
+const ProjectCard = ({ project }: { project: Project }) => {
+  const {
+    title,
+    image,
+    category,
+    description,
+    tech,
+    link,
+    githubRepo,
+    reviewLink,
+  } = project;
+
   return (
-    <Card shadow="sm" isHoverable fullWidth className="hover:scale-105 md:hover:scale-110">
-      <CardHeader className="pb-0 pt-3 px-4 flex-col items-start">
-        <small className="text-default-500 text-xs">{description}</small>
-        <h4 className="font-bold text-large">{title}</h4>
-      </CardHeader>
-      <CardBody className="overflow-visible items-center justify-center h-40">
-        <a href={githubUrl}>
+    <Card className='group relative overflow-hidden max-w-sm hover:shadow-lg transition-all mx-auto '>
+      <CardHeader className='p-0 bg-primary/20'>
+        <div className='relative w-full h-52 flex items-center justify-center'>
           <Image
-            alt="Card background"
-            className="object-cover rounded-md border dark:border-none"
             src={image}
-            width={270}
+            alt={title}
+            width={200}
+            height={120}
+            className='absolute bottom-4 shadow-2xl w-auto max-h-32 mx-auto rounded-md object-center h-auto'
+            priority
           />
-        </a>
-      </CardBody>
-      <CardFooter className="justify-between items-center shadow-small">
-        <div className="flex flex-row gap-2">
-          {tags?.map((tag) => (
-            <Chip key={tag} size="sm" radius="md" variant="bordered">
-              {tag}
-            </Chip>
-          ))}
+          <div className='flex gap-x-4 z-20'>
+            <Link
+              href={link ? link : reviewLink}
+              className='flex items-center justify-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 rounded-full bg-primary dark:bg-accent'>
+              <Button variant='link' size='icon'>
+                <RiLinksLine className='w-8 h-8 text-white' />
+              </Button>
+            </Link>
+            <Link
+              href={githubRepo}
+              className='flex items-center justify-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 rounded-full bg-primary dark:bg-accent'>
+              <Button variant='link' size='icon'>
+                <RiGithubFill className='w-8 h-8 text-white' />
+              </Button>
+            </Link>
+          </div>
         </div>
-        <a href={githubUrl} className="text-2xl mx-2">
-          <AiOutlineGithub />
-        </a>
+      </CardHeader>
+      <CardContent className='px-4 py-2 gap-y-2 flex flex-col h-32'>
+        <Badge className='text-sm font-medium mb-2 absolute top-4 left-5'>
+          {category}
+        </Badge>
+        <h4 className='text-2xl font-bold'>{title}</h4>
+        <p className='text-muted-foreground break-keep text-sm'>
+          {description}
+        </p>
+      </CardContent>
+      <CardFooter className='flex gap-x-2 text-sm'>
+        {tech.map((tech) => (
+          <span key={tech}>#{tech}</span>
+        ))}
       </CardFooter>
     </Card>
   );
