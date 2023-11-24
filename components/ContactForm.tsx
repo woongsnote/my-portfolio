@@ -19,7 +19,7 @@ const ContactForm = () => {
         toast.success("이메일이 성공적으로 전송되었습니다!");
       }}
       className='flex max-w-3xl mx-auto flex-col w-full p-4 gap-4'>
-      <div className='flex w-full justify-between gap-4 flex-col md:flex-row'>
+      <div className='flex w-full justify-between gap-4 flex-col'>
         <Input
           type='text'
           placeholder='이름'
