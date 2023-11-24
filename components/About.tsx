@@ -26,12 +26,12 @@ const InfoData = [
   { icon: <RiInstagramLine />, text: "@woongsnote" },
 ];
 
-const Tools: string[] = ["VsCode", "Notion", "Slack"];
+const tools: string[] = ["VsCode", "Notion", "Slack"];
 
 const About = () => {
   return (
     <section className='flex flex-col py-20 px-2 w-full gap-y-6'>
-      <SectionTitle title='About Me' />
+      <SectionTitle title='저를 소개합니다.' />
       <div className='flex justify-center'>
         <div className='hidden lg:flex flex-1 items-center justify-center'>
           <Image
@@ -47,13 +47,13 @@ const About = () => {
           <Tabs defaultValue='personal'>
             <TabsList className='w-full grid lg:grid-cols-3 lg:max-w-xl xl:border rounded-full h-12 items-center dark:border-none'>
               <TabsTrigger className='w-48 lg:w-auto' value='personal'>
-                Personal Info
+                자기소개
               </TabsTrigger>
               <TabsTrigger className='w-48 lg:w-auto' value='qualifications'>
-                Qualifications
+                경험
               </TabsTrigger>
               <TabsTrigger className='w-48 lg:w-auto' value='skills'>
-                Skills
+                기술
               </TabsTrigger>
             </TabsList>
             <div className='mt-20 lg:mt-8'>
@@ -88,11 +88,8 @@ const About = () => {
                 </div>
               </TabsContent>
               <TabsContent value='qualifications'>
-                <div className=''>
-                  <h3 className='text-center font-bold text-2xl mb-4'>
-                    My Awesome Journey
-                  </h3>
-                  <div className='grid xl:grid-cols-2 gap-4'>
+                <div>
+                  <div className='grid lg:grid-cols-2 gap-4'>
                     <div>
                       <div className='flex text-primary gap-x-4 items-center text-lg'>
                         <RiBriefcase5Line />
@@ -142,9 +139,6 @@ const About = () => {
               </TabsContent>
               <TabsContent value='skills'>
                 <div className='text-center xl:text-start'>
-                  <h3 className='text-2xl font-bold mb-4'>
-                    Tools I Use Everyday
-                  </h3>
                 </div>
                 <div className='flex flex-col gap-y-4'>
                   <h4 className='border-b text-xl font-bold'>Skills</h4>
@@ -160,7 +154,7 @@ const About = () => {
                 <div className='flex flex-col gap-y-4 mt-2'>
                   <h4 className='border-b text-xl font-bold'>Tools</h4>
                   <div className='flex gap-x-2'>
-                    {Tools.map((tool) => (
+                    {tools.map((tool) => (
                       <span
                         key={tool}
                         className='border-2 rounded-full px-2 font-bold'>

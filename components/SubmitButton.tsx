@@ -11,9 +11,9 @@ const SubmitButton = () => {
       {pending ? (
         "전송 중입니다..."
       ) : (
-        <>
+        <span className="flex items-center gap-x-2">
           보내기 <BsSend />
-        </>
+        </span>
       )}
     </Button>
   );
