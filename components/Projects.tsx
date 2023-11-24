@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 import SectionTitle from "./SectionTitle";
 
@@ -21,7 +21,7 @@ const latestProjects = ProjectsData.slice(0, MAX_PROJECTS);
 const Projects = () => {
   return (
     <section className='flex flex-col xl:flex-row mb-12 items-center justify-center relative w-full min-h-screen h-full'>
-      <div className='w-full xl:max-w-md mx-auto xl:mx-0 text-center xl:text-start mb-12 flex flex-col gap-y-4'>
+      <div className='w-full xl:max-w-md mx-auto xl:mx-0 text-center xl:text-start mb-12 flex flex-col gap-y-4 p-2'>
         <SectionTitle title='Latest Projects' />
         <p className='mb-4 break-keep text-start'>
           최근에 구현했던 프로젝트들입니다. 더 많은 프로젝트는 아래 버튼을
@@ -31,13 +31,19 @@ const Projects = () => {
           <Button>All Projects</Button>
         </Link>
       </div>
-      <div className='w-full xl:max-w-3xl flex'>
+      <div className='w-full xl:max-w-3xl py-2'>
         <Swiper
-          className='xl:h-[440px]'
+          className='h-[440px]'
+          modules={[Pagination]}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+            },
+          }}
+          loop={true}
           slidesPerView={1}
-          breakpoints={{ 640: { slidesPerView: 2 } }}
+          centeredSlides={true}
           spaceBetween={32}
-          modules={[Pagination, Navigation]}
           pagination={{ clickable: true }}>
           {latestProjects.map((project) => (
             <SwiperSlide key={project.title} className=''>

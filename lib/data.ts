@@ -31,15 +31,18 @@ export const ExperienceData: Experience[] = [
   },
 ];
 
+const GITHUB_URL = "https://github.com/woongsnote";
+const BLOG_URL = "https://woongsnote.dev/blog";
+
 export const ProjectsData: Project[] = [
   {
     title: "기술 블로그",
     description:
       "개발 관련 학습한 지식을 기록하고, 공유하기 위해 구현한 블로그",
-    tech: ["Astro", "TypeScript", "TailwindCSS"],
+    tech: ["Next.js", "Astro", "TypeScript"],
     image: "/tech-blog.png",
-    githubRepo: "/woongsnote-dev",
-    reviewLink: "https://www.woongsnote.dev/blog/230101-why-make-tech-blog",
+    githubRepo: `${GITHUB_URL}/woongsnote-dev`,
+    reviewLink: `${BLOG_URL}/230101-why-make-tech-blog`,
     category: "Next.js",
   },
   {
@@ -47,9 +50,8 @@ export const ProjectsData: Project[] = [
     description: "Text를 입력해서, QR Code를 생성하고 저장할 수 있는 서비스",
     tech: ["Next.js", "TypeScript"],
     image: "/qr-code.png",
-    githubRepo: "/qr-quasar",
-    link: "",
-    reviewLink: "https://www.woongsnote.dev/blog/230911-qr-code-generator",
+    githubRepo: `${GITHUB_URL}/qr-quasar`,
+    reviewLink: `${BLOG_URL}/230911-qr-code-generator`,
     category: "Next.js",
   },
   {
@@ -57,9 +59,8 @@ export const ProjectsData: Project[] = [
     description: "블로그 포스팅에 들어갈 섬네일을 빠르게 생성할 수 있는 서비스",
     tech: ["Next.js", "TypeScript"],
     image: "/mini-pick.png",
-    githubRepo: "/image-generator",
-    link: "",
-    reviewLink: "",
+    githubRepo: `${GITHUB_URL}/image-generator`,
+    reviewLink: `${BLOG_URL}/`,
     category: "Next.js",
   },
 
@@ -68,9 +69,8 @@ export const ProjectsData: Project[] = [
     description: "ContentLayer 블로그를 구현할 수 있는 기본 템플릿",
     tech: ["Next.js", "ContentLayer"],
     image: "/mdx-template.png",
-    githubRepo: "/contentlayer-blog-template",
-    link: "",
-    reviewLink: "",
+    githubRepo: `${GITHUB_URL}/contentlayer-blog-template`,
+    reviewLink: `${BLOG_URL}/`,
     category: "Next.js",
   },
   {
@@ -79,9 +79,8 @@ export const ProjectsData: Project[] = [
       "영화 정보 검색 및 관람한 영화, 영화관 후기를 작성할 수 있는 커뮤니티",
     tech: ["React", "JavaScript"],
     image: "/movie-critic.png",
-    githubRepo: "/movie-critic-fe",
-    link: "",
-    reviewLink: "",
+    githubRepo: `${GITHUB_URL}/movie-critic-fe`,
+    reviewLink: `${BLOG_URL}/`,
     category: "React",
   },
   {
@@ -89,9 +88,8 @@ export const ProjectsData: Project[] = [
     description: "읽은 책에 관한 후기를 작성할 수 있는 서비스",
     tech: ["React", "JavaScript"],
     image: "/book-book.png",
-    githubRepo: "/bookbook-fe",
-    link: "",
-    reviewLink: "",
+    githubRepo: `${GITHUB_URL}/bookbook-fe`,
+    reviewLink: `${BLOG_URL}/`,
     category: "React",
   },
 ];

@@ -15,6 +15,9 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-pretendard)"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

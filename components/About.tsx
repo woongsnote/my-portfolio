@@ -96,7 +96,7 @@ const About = () => {
                     <div>
                       <div className='flex text-primary gap-x-4 items-center text-lg'>
                         <RiBriefcase5Line />
-                        <h4 className='capitalize font-medium'>experience</h4>
+                        <h4 className='capitalize font-medium'>업무 경험</h4>
                       </div>
                       <ul className='flex flex-col gap-y-4 mt-2 '>
                         {experience.map(({ company, years, role }) => (
@@ -117,7 +117,7 @@ const About = () => {
                     <div>
                       <div className='flex text-primary gap-x-4 items-center text-lg'>
                         <RiGraduationCapFill />
-                        <h4 className='capitalize font-medium'>education</h4>
+                        <h4 className='capitalize font-medium'>교육</h4>
                       </div>
                       <ul className='flex flex-col gap-y-4 mt-2 '>
                         {education.map(
