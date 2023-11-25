@@ -6,12 +6,12 @@ import contactImage from "@/public/contact.svg";
 
 export default function Contact() {
   return (
-    <section className="flex flex-col p-4">
+    <section className="flex flex-col p-4 gap-y-12">
       <div className="flex items-center justify-between p-4 mx-auto w-full">
         <div className="flex-1">
-          <PageTitle title="Contact Me" />
+          <PageTitle title="Let's Work Together" />
         </div>
-        <div className="flex flex-1 items-center justify-center flex-col mx-auto">
+        <div className="hidden md:flex flex-1 items-center justify-center flex-col mx-auto">
           <Image
             src={contactImage}
             alt="contact"
@@ -26,8 +26,8 @@ export default function Contact() {
           </p>
         </div>
       </div>
-      <section className="flex">
-        <div className="flex-1 flex flex-col gap-y-8  text-xl font-bold lg:text-2xl">
+      <section className="flex flex-col md:flex-row gap-y-8">
+        <div className="flex-1 flex flex-col gap-y-8 text-xl font-bold lg:text-2xl">
           <p className="flex items-center gap-x-2">
             <RiMailLine className="text-primary" /> woongsnote@gmail.com
           </p>
