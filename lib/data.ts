@@ -60,7 +60,7 @@ export const ProjectsData: Project[] = [
     tech: ["Next.js", "TypeScript"],
     image: "/mini-pick.png",
     githubRepo: `${GITHUB_URL}/image-generator`,
-    reviewLink: `${BLOG_URL}/`,
+    reviewLink: `${BLOG_URL}/230831-mini-pick`,
     category: "Next.js",
   },
 
@@ -70,7 +70,7 @@ export const ProjectsData: Project[] = [
     tech: ["Next.js", "ContentLayer"],
     image: "/mdx-template.png",
     githubRepo: `${GITHUB_URL}/contentlayer-blog-template`,
-    reviewLink: `${BLOG_URL}/`,
+    reviewLink: `${BLOG_URL}/230810-make-contentlayer-blog`,
     category: "Next.js",
   },
   {
@@ -80,7 +80,7 @@ export const ProjectsData: Project[] = [
     tech: ["React", "JavaScript"],
     image: "/movie-critic.png",
     githubRepo: `${GITHUB_URL}/movie-critic-fe`,
-    reviewLink: `${BLOG_URL}/`,
+    reviewLink: `${BLOG_URL}/221030-movie-critics`,
     category: "React",
   },
   {
@@ -89,7 +89,7 @@ export const ProjectsData: Project[] = [
     tech: ["React", "JavaScript"],
     image: "/book-book.png",
     githubRepo: `${GITHUB_URL}/bookbook-fe`,
-    reviewLink: `${BLOG_URL}/`,
+    reviewLink: `${BLOG_URL}/220916-bookbook`,
     category: "React",
   },
 ];
