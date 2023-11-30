@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation";
 
 import { ProjectsData } from "@/lib/data";
 
@@ -33,14 +32,13 @@ const Projects = () => {
       <div className='w-full lg:max-w-4xl xl:max-w-3xl py-2 mx-auto'>
         <Swiper
           className='h-[440px]'
-          modules={[Pagination, Navigation]}
+          modules={[Pagination]}
           breakpoints={{
             640: {
               slidesPerView: 2,
             },
           }}
           loop={true}
-          navigation={true}
           slidesPerView={1}
           spaceBetween={32}
           centeredSlides={true}
