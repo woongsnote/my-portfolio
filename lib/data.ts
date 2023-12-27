@@ -89,7 +89,7 @@ export const ProjectsData: Project[] = [
     tech: ["React", "JavaScript"],
     image: "/book-book.png",
     githubRepo: `${GITHUB_URL}/bookbook-fe`,
-    reviewLink: `${BLOG_URL}/220916-bookbook`,
+    reviewLink: `${BLOG_URL}/220916-book-book`,
     category: "React",
   },
 ];
