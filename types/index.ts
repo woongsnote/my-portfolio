@@ -1,12 +1,12 @@
 export type Project = {
   title: string;
-  tech: string[];
+  tag: string[];
   image: string;
   description: string;
-  link?: string;
-  reviewLink: string;
   githubRepo: string;
   category: string;
+  isTeam: boolean;
+  members?: string;
 };
 
 export type PageLinkProps = {
