@@ -1,57 +1,43 @@
-"use client";
-
-import { TypeAnimation } from "react-type-animation";
-import ProfileImage from "./ProfileImage";
-import { RiArrowDownSLine, RiDownloadLine } from "react-icons/ri";
-import { Button } from "./ui/button";
+import { FiDownload } from "react-icons/fi";
+import Photo from "./Photo";
 import Socials from "./Socials";
-import ContactButton from "./ContactButton";
+import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <section className="py-12 lg:py-24 lg:min-h-screen h-full flex flex-col gap-x-8 flex-grow relative">
-      <div className="flex justify-center gap-x-8">
-        <div className="flex w-full flex-col justify-center mx-auto xl:mx-0 gap-y-1">
-          <h1 className="mb-4 text-3xl lg:text-5xl font-black text-start drop-shadow-lg !leading-normal">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">
-              안녕하세요, 저는{" "}
-            </span>
-            <br />
-            <TypeAnimation
-              sequence={[
-                "웹 개발자입니다",
-                1000,
-                "프론트엔드 개발자입니다",
-                1000,
-                "리액트 개발자입니다",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+    <section className="h-full">
+      <div className="flex flex-col lg:flex-row items-center lg:pt-8 lg:pb-24 w-full justify-between mx-auto">
+        <div className="text-center lg:text-start order-2 lg:order-none">
+          <span className="text-xl">Software Developer</span>
+          <h1 className="h1 mb-6">
+            Hello, I&apos;m <br />
+            <span className="text-accent">Jiwoong Moon</span>
           </h1>
-          <p className="break-keep mb-2 text-sm lg:text-xl">
-            새로운 기술을 학습하고 적용하는 것을 즐기는 개발자 <b>문지웅</b>
-            입니다.
+          <p className="max-w-lg mb-9 text-white/80">
+            I excel at crafting elegant digital experiences and I am proficient
+            in various programming languages and technologies.
           </p>
-          <div className="flex flex-col lg:flex-row mt-8 gap-y-8 gap-x-3 mx-auto lg:mx-0 mb-12">
-            <ContactButton />
-            <a href="/CV.pdf" className="flex items-center">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            <a href="/CV.pdf" download>
               <Button
                 variant="outline"
-                className="gap-x-2 text-lg mx-auto w-full hover:shadow-xl"
-              >
-                이력서 저장하기 <RiDownloadLine size={18} />
+                size="lg"
+                className="flex items-center gap-2">
+                <span className="">Download CV</span>
+                <FiDownload />
               </Button>
             </a>
+            <div className="mb-8 lg:mb-0">
+              <Socials
+                containerStyles="flex gap-6"
+                iconStyles="size-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all hover:scale-110 duration-500"
+              />
+            </div>
           </div>
-          <Socials />
         </div>
-        <ProfileImage />
-      </div>
-      <div className="hidden lg:flex absolute left-2/4 bottom-44 lg:bottom-20 animate-bounce">
-        <RiArrowDownSLine className="text-3xl text-primary" />
+        <div className="relative mx-auto w-full items-center justify-center p-6 overflow-hidden order-1 lg:order-none mb-8 lg:mb-0 max-w-xs border border-accent rounded-full">
+          <Photo />
+        </div>
       </div>
     </section>
   );

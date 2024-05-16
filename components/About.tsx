@@ -10,14 +10,6 @@ import {
   RiUser3Fill,
 } from "react-icons/ri";
 
-import {
-  EducationData as education,
-  ExperienceData as experience,
-  SkillsData as skills,
-} from "@/lib/data";
-
-import SectionTitle from "./SectionTitle";
-
 const InfoData = [
   { icon: <RiUser3Fill />, text: "문지웅" },
   { icon: <RiMailFill />, text: "woongsnote@gmail.com" },

@@ -25,14 +25,17 @@ export type Info = {
 };
 
 export type Experience = {
-  company: string;
-  years: string;
-  role: string;
+  title: string;
+  description: string;
+  items: { company: string; duration: string; position: string }[];
 };
 
 export type Education = {
-  university?: string;
-  company?: string;
-  qualification: string;
-  years: string;
+  title: string;
+  description: string;
+  items: {
+    institution: string;
+    degree: string;
+    duration: string;
+  }[];
 };

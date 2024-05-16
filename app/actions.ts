@@ -1,6 +1,6 @@
 "use server";
 
-import { getErrorMessage, validateString } from "@/utils/index";
+import { getErrorMessage, validateString } from "@/lib/utils";
 import { Resend } from "resend";
 import { EmailTemplate } from "@/components/EmailTemplate";
 import { renderAsync } from "@react-email/render";
