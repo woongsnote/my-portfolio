@@ -24,13 +24,13 @@ export type Info = {
   text: string;
 };
 
-export type Experience = {
+export type TExperience = {
   title: string;
   description: string;
   items: { company: string; duration: string; position: string }[];
 };
 
-export type Education = {
+export type TEducation = {
   title: string;
   description: string;
   items: {

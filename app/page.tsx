@@ -1,5 +1,5 @@
 //components
-import Stats from "@/components/Stats";
+import Stats from "@/components/Home/Stats";
 import Hero from "@/components/Hero";
 
 const Home = () => {
