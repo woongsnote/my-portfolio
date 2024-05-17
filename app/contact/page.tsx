@@ -1,11 +1,11 @@
-import { RiLinkedinBoxFill, RiMailLine } from "react-icons/ri";
-import ContactForm from "@/components/ContactForm";
-import ContactLink from "@/components/ContactLink";
+import ContactForm from "@/components/Contact/ContactForm";
+import ContactInfo from "@/components/Contact/ContactInfo";
 
 export default function Contact() {
   return (
-    <>
+    <div className="flex flex-col lg:flex-row gap-8">
       <ContactForm />
-    </>
+      <ContactInfo />
+    </div>
   );
 }

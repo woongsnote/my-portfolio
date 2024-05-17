@@ -29,21 +29,21 @@ const Experience = () => {
       <p className="max-w-3xl text-white/60 mx-auto lg:mx-0">
         {experience.description}
       </p>
-        <ul className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          {experience.items.map((item) => (
-            <li
-              key={item.company}
-              className="flex flex-col justify-center items-center lg:items-start gap-1 bg-[#232329] py-4 px-8 rounded-xl"
-            >
-              <span className="text-accent">{item.duration}</span>
-              <h3 className="text-xl max-w-72 min-h-16">{item.position}</h3>
-              <div className="flex items-center gap-3">
-                <span className="bg-accent size-2 rounded-full"></span>
-                <p>{item.company}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+      <ul className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        {experience.items.map((item) => (
+          <li
+            key={item.company}
+            className="flex flex-col justify-center items-center lg:items-start gap-1 bg-[#232329] py-4 px-8 rounded-xl"
+          >
+            <span className="text-accent">{item.duration}</span>
+            <h3 className="text-xl max-w-72 min-h-16">{item.position}</h3>
+            <div className="flex items-center gap-3">
+              <span className="bg-accent size-2 rounded-full"></span>
+              <p>{item.company}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

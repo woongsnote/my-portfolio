@@ -1,4 +1,3 @@
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { TEducation } from "@/types";
 
 const education: TEducation = {
@@ -25,23 +24,20 @@ const Education = () => {
       <p className="max-w-3xl text-white/60 mx-auto lg:mx-0">
         {education.description}
       </p>
-      <ScrollArea className="h-72">
-        <ul className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-          {education.items.map((item) => (
-            <li
-              key={item.duration}
-              className="flex flex-col justify-center items-center lg:items-start gap-1 bg-[#232329] py-4 px-8 rounded-xl"
-            >
-              <span className="text-accent">{item.duration}</span>
-              <h3 className="text-xl max-w-72 min-h-16">{item.degree}</h3>
-              <div className="flex items-center gap-3">
-                <span className="bg-accent size-2 rounded-full"></span>
-                <p>{item.institution}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </ScrollArea>
+      <ul className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+        {education.items.map((item) => (
+          <li
+            key={item.duration}
+            className="flex flex-col justify-center items-center lg:items-start gap-1 bg-[#232329] py-4 px-8 rounded-xl">
+            <span className="text-accent">{item.duration}</span>
+            <h3 className="text-xl max-w-72 min-h-16">{item.degree}</h3>
+            <div className="flex items-center gap-3">
+              <span className="bg-accent size-2 rounded-full"></span>
+              <p>{item.institution}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

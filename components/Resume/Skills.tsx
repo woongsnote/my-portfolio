@@ -1,11 +1,4 @@
 import {
-  TooltipProvider,
-  Tooltip,
-  TooltipTrigger,
-  TooltipContent,
-} from "@/components/ui/tooltip";
-
-import {
   SiTailwindcss,
   SiJavascript,
   SiTypescript,
@@ -13,45 +6,50 @@ import {
   SiHtml5,
   SiCss3,
   SiNextdotjs,
-  SiGit,
-  SiGithub,
   SiAstro,
 } from "react-icons/si";
+
+import {
+  TooltipProvider,
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "@/components/ui/tooltip";
 
 const skills = {
   title: "My Skills",
   description: "",
   skillList: [
     {
-      name: "html 5",
+      name: "Html 5",
       icon: <SiHtml5 />,
     },
     {
-      name: "css 3",
+      name: "Css 3",
       icon: <SiCss3 />,
     },
     {
-      name: "javascript",
+      name: "Javascript",
       icon: <SiJavascript />,
     },
     {
-      name: "typescript",
+      name: "Typescript",
       icon: <SiTypescript />,
     },
     {
-      name: "react.js",
+      name: "React",
       icon: <SiReact />,
     },
     {
-      name: "next.js",
+      name: "Next.js",
       icon: <SiNextdotjs />,
     },
     {
-      name: "tailwind.css",
+      name: "Tailwindcss",
       icon: <SiTailwindcss />,
     },
     {
-      name: "astro",
+      name: "Astro",
       icon: <SiAstro />,
     },
   ],

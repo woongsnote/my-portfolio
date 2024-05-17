@@ -6,7 +6,7 @@ import Logo from "./Logo";
 
 const Header = () => {
   return (
-    <header className="py-8 xl:py-12 text-white">
+    <header className="py-8 text-white">
       <div className="container flex justify-between items-center">
         <div className="text-4xl">
           <Logo />

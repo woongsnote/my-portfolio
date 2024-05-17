@@ -12,7 +12,7 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "1rem",
+      padding: "2rem",
     },
     fontFamily: {
       primary: "var(--font-jetBrainsMono)",

@@ -6,8 +6,8 @@ type ContactLinkProps = {
 
 const ContactLink = ({ link, icon, text }: ContactLinkProps) => {
   return (
-    <a href={link} className='flex items-center gap-x-2' target='_blank'>
-      <span className='text-primary'>{icon}</span>
+    <a href={link} className="flex items-center gap-x-2" target="_blank">
+      <span className="text-primary">{icon}</span>
       <span>{text}</span>
     </a>
   );

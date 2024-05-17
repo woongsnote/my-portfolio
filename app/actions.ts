@@ -33,7 +33,7 @@ export async function sendEmail(formData: FormData) {
       senderName: senderName as string,
       message: message as string,
     }),
-    { pretty: true }
+    { pretty: true },
   );
   try {
     const { data } = await resend.emails.send({

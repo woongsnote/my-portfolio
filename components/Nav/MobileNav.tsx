@@ -1,10 +1,12 @@
 "use client";
+
 import Link from "next/link";
-import { links } from "./links";
 import { usePathname } from "next/navigation";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import { links } from "./links";
 import { CiMenuFries } from "react-icons/ci";
-import Logo from "../Logo";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Logo from "@/components/Logo";
+
 const MobileNav = () => {
   const pathname = usePathname();
   return (
@@ -23,8 +25,7 @@ const MobileNav = () => {
               key={name}
               className={`${
                 path === pathname && " text-accent border-b-2 border-accent"
-              } w-fit text-xl capitalize font-medium hover:text-accent transition-all`}
-            >
+              } w-fit text-xl capitalize font-medium hover:text-accent transition-all`}>
               {name}
             </Link>
           ))}

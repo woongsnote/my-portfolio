@@ -1,13 +1,13 @@
 import { FiDownload } from "react-icons/fi";
-import Photo from "./Photo";
-import Socials from "./Socials";
-import { Button } from "./ui/button";
+import { Photo } from "@/components/Home";
+import Socials from "@/components/Socials";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
     <section className="h-full">
       <div className="flex flex-col lg:flex-row items-center lg:pt-8 lg:pb-24 w-full justify-between mx-auto">
-        <div className="text-center lg:text-start order-2 lg:order-none">
+        <div className="text-center lg:text-start order-2 lg:order-none lg:w-1/2">
           <span className="text-xl">Software Developer</span>
           <h1 className="h1 mb-6">
             Hello, I&apos;m <br />

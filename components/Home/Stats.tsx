@@ -16,7 +16,8 @@ const Stats = () => {
         {stats.map(({ num, text }, index) => (
           <div
             className="flex-1 flex gap-4 items-center justify-center lg:justify-start"
-            key={index}>
+            key={index}
+          >
             <CountUp
               end={num}
               duration={5}

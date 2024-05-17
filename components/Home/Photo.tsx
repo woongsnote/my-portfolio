@@ -2,7 +2,7 @@ import Image from "next/image";
 const Photo = () => {
   return (
     <Image
-      src={"/profile.png"}
+      src={"/assets/profile.png"}
       alt="profile"
       priority
       width={100}
