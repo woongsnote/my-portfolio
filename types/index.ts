@@ -1,9 +1,8 @@
 export type Project = {
-  num: string;
   category: string;
   title: string;
   description: string;
-  stack: { name: string }[];
+  stack: string[];
   image: string;
   live?: string;
   github: string;
@@ -24,13 +23,13 @@ export type Info = {
   text: string;
 };
 
-export type TExperience = {
+export type Experience = {
   title: string;
   description: string;
   items: { company: string; duration: string; position: string }[];
 };
 
-export type TEducation = {
+export type Education = {
   title: string;
   description: string;
   items: {

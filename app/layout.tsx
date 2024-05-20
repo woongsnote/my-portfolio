@@ -26,12 +26,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="kr">
       <body className={jetBrainsMono.variable}>
         <Header />
         <main>{children}</main>
         <Footer />
-        <Toaster />
+        <Toaster position="top-center" />
       </body>
     </html>
   );

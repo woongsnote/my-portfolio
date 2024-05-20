@@ -3,8 +3,6 @@ import {
   SiJavascript,
   SiTypescript,
   SiReact,
-  SiHtml5,
-  SiCss3,
   SiNextdotjs,
   SiAstro,
 } from "react-icons/si";
@@ -15,19 +13,11 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "@/components/ui/tooltip";
+import { GridContainer } from "@/components/Common";
 
 const skills = {
-  title: "My Skills",
-  description: "",
+  title: "기술 스택",
   skillList: [
-    {
-      name: "Html 5",
-      icon: <SiHtml5 />,
-    },
-    {
-      name: "Css 3",
-      icon: <SiCss3 />,
-    },
     {
       name: "Javascript",
       icon: <SiJavascript />,
@@ -41,12 +31,12 @@ const skills = {
       icon: <SiReact />,
     },
     {
-      name: "Next.js",
-      icon: <SiNextdotjs />,
-    },
-    {
       name: "Tailwindcss",
       icon: <SiTailwindcss />,
+    },
+    {
+      name: "Next.js",
+      icon: <SiNextdotjs />,
     },
     {
       name: "Astro",
@@ -56,23 +46,25 @@ const skills = {
 };
 const Skills = () => {
   return (
-    <div className="flex flex-col gap-8 text-center lg:text-start">
-      <div className="flex flex-col gap-4">
-        <h3 className="text-4xl font-bold">{skills.title}</h3>
-        <p>{skills.description}</p>
-      </div>
-      <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <GridContainer
+      title={skills.title}
+      containerClassName="flex flex-col gap-6 text-center lg:text-start col-span-2 bg-[#232329] p-8 rounded-xl">
+      <ul className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center justify-center">
         {skills.skillList.map(({ name, icon }) => {
           return (
-            <li key={name}>
+            <li
+              key={name}
+              className="w-full lg:w-fit flex items-center justify-center">
               <TooltipProvider delayDuration={100}>
                 <Tooltip>
-                  <TooltipTrigger className="w-full bg-[#232329] rounded-xl flex items-center justify-center group h-36">
-                    <div className="text-5xl  group-hover:text-accent transition-all duration-300">
+                  <TooltipTrigger
+                    asChild
+                    className="w-fit rounded-xl flex items-center justify-center">
+                    <div className="text-5xl items-center justify-center hover:text-accent transition-all duration-300">
                       {icon}
                     </div>
                   </TooltipTrigger>
-                  <TooltipContent>
+                  <TooltipContent side="bottom">
                     <p className="text-lg">{name}</p>
                   </TooltipContent>
                 </Tooltip>
@@ -81,7 +73,7 @@ const Skills = () => {
           );
         })}
       </ul>
-    </div>
+    </GridContainer>
   );
 };
 

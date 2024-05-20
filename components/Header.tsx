@@ -1,25 +1,10 @@
-import Link from "next/link";
 import Nav from "./Nav/Nav";
-import { Button } from "./ui/button";
-import MobileNav from "./Nav/MobileNav";
-import Logo from "./Logo";
 
 const Header = () => {
   return (
-    <header className="py-8 text-white">
-      <div className="container flex justify-between items-center">
-        <div className="text-4xl">
-          <Logo />
-        </div>
-        <div className="hidden lg:flex items-center gap-8">
-          <Nav />
-          <Link href="/contact">
-            <Button>Hire me</Button>
-          </Link>
-        </div>
-        <div className="lg:hidden">
-          <MobileNav />
-        </div>
+    <header className="text-white fixed top-4 inset-x-0 z-10">
+      <div className="container flex items-center w-fit mx-auto border border-black/10 shadow-md rounded-lg py-4 bg-primary">
+        <Nav />
       </div>
     </header>
   );

@@ -4,11 +4,11 @@
 
 @layer base {
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply font-primary bg-primary text-white leading-loose min-h-screen;
   }
 
   main {
-    @apply container flex flex-col min-h-screen;
+    @apply container flex flex-col relative pt-28 max-w-7xl;
   }
 
   .h1 {

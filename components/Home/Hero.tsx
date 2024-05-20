@@ -1,3 +1,6 @@
+"use client";
+
+import { TypeAnimation } from "react-type-animation";
 import { FiDownload } from "react-icons/fi";
 import { Photo } from "@/components/Home";
 import Socials from "@/components/Socials";
@@ -5,25 +8,41 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="h-full">
+    <section className="container">
       <div className="flex flex-col lg:flex-row items-center lg:pt-8 lg:pb-24 w-full justify-between mx-auto">
-        <div className="text-center lg:text-start order-2 lg:order-none lg:w-1/2">
-          <span className="text-xl">Software Developer</span>
-          <h1 className="h1 mb-6">
-            Hello, I&apos;m <br />
-            <span className="text-accent">Jiwoong Moon</span>
+        <div className="text-center lg:text-start order-2 lg:order-none w-full lg:w-2/3">
+          <h1 className="mb-4 text-3xl lg:text-5xl font-black drop-shadow-lg !leading-normal">
+            안녕하세요. 저는
+            <br />
+            <TypeAnimation
+              sequence={[
+                "웹 개발자",
+                1000,
+                "프론트엔드 개발자",
+                1000,
+                "리액트 개발자",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+              className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text"
+            />
+            <br />
+            <span>입니다.</span>
           </h1>
-          <p className="max-w-lg mb-9 text-white/80">
-            I excel at crafting elegant digital experiences and I am proficient
-            in various programming languages and technologies.
+          <p className="break-keep mb-4 lg:text-xl">
+            새로운 기술을 학습하고 적용하는 것을 즐기는 개발자 <b>문지웅</b>
+            입니다.
           </p>
           <div className="flex flex-col lg:flex-row items-center gap-8">
             <a href="/CV.pdf" download>
               <Button
                 variant="outline"
                 size="lg"
-                className="flex items-center gap-2">
-                <span className="">Download CV</span>
+                className="flex items-center gap-2"
+              >
+                <span className="">이력서</span>
                 <FiDownload />
               </Button>
             </a>
@@ -35,9 +54,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="relative mx-auto w-full items-center justify-center p-6 overflow-hidden order-1 lg:order-none mb-8 lg:mb-0 max-w-xs border border-accent rounded-full">
-          <Photo />
-        </div>
+        <Photo />
       </div>
     </section>
   );

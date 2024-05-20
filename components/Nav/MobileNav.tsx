@@ -25,7 +25,8 @@ const MobileNav = () => {
               key={name}
               className={`${
                 path === pathname && " text-accent border-b-2 border-accent"
-              } w-fit text-xl capitalize font-medium hover:text-accent transition-all`}>
+              } w-fit text-xl capitalize font-medium hover:text-accent transition-all`}
+            >
               {name}
             </Link>
           ))}
