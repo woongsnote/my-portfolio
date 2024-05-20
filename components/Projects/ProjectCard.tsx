@@ -12,18 +12,19 @@ const ProjectCard = ({ project }: { project: Project }) => {
   const { title, description, image, category, stack, github, live } = project;
 
   return (
-    <div className="w-full border max-w-lg mx-auto p-4 rounded-xl break-keep relative border-white/10">
+    <div className="w-full border max-w-lg mx-auto p-4 rounded-xl break-keep relative border-white/10 flex gap-4 flex-col">
       <span className="capitalize">{category}</span>
       <h2 className="text-accent text-3xl">{title}</h2>
       <p className="text-white/60">{description}</p>
-      {/* TODO */}
-      <div className="w-full h-48 rounded-lg overflow-hidden">
+      <div className="w-full rounded-lg overflow-hidden flex flex-col">
         <Image
           src={image}
           alt={title}
-          width="300"
-          height="300"
-          className="size-full"
+          width={800}
+          height={480}
+          sizes="100vw"
+          className="w-full h-auto object-cover"
+          priority
         />
       </div>
       <div className="flex flex-wrap gap-4 my-4 aspect-auto">
@@ -40,7 +41,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
               <TooltipTrigger className="size-10 rounded-full bg-white/5 flex justify-center items-center group">
                 <BsGithub className="text-white text-xl group-hover:text-accent" />
               </TooltipTrigger>
-              <TooltipContent>Github repository</TooltipContent>
+              <TooltipContent>{github}</TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </a>
@@ -51,7 +52,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 <TooltipTrigger className="size-10 rounded-full bg-white/5 flex justify-center items-center group">
                   <BsArrowUpRight className="text-white text-xl group-hover:text-accent" />
                 </TooltipTrigger>
-                <TooltipContent>Live preview</TooltipContent>
+                <TooltipContent>{live}</TooltipContent>
               </Tooltip>
             </TooltipProvider>
           </a>
