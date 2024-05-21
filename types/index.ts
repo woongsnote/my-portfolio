@@ -1,12 +1,11 @@
 export type Project = {
-  title: string;
-  tag: string[];
-  image: string;
-  description: string;
-  githubRepo: string;
   category: string;
-  isTeam: boolean;
-  members?: string;
+  title: string;
+  description: string;
+  stack: string[];
+  image: string;
+  live?: string;
+  github: string;
 };
 
 export type PageLinkProps = {
@@ -25,14 +24,17 @@ export type Info = {
 };
 
 export type Experience = {
-  company: string;
-  years: string;
-  role: string;
+  title: string;
+  description: string;
+  items: { company: string; duration: string; position: string }[];
 };
 
 export type Education = {
-  university?: string;
-  company?: string;
-  qualification: string;
-  years: string;
+  title: string;
+  description: string;
+  items: {
+    institution: string;
+    degree: string;
+    duration: string;
+  }[];
 };

@@ -1,50 +1,28 @@
-import {
-  RiGithubFill,
-  RiLinkedinFill,
-  RiInstagramLine,
-  RiInbox2Fill,
-} from "react-icons/ri";
+import { FaGithub, FaLinkedin, FaInstagram, FaBlog } from "react-icons/fa";
 
 type Social = {
-  title: string;
-  icon: React.ReactElement;
-  href: string;
+  icon: React.ReactNode;
+  path: string;
 };
 
-const SocialLinkItems: Social[] = [
-  {
-    title: "GitHub",
-    icon: <RiGithubFill className="" />,
-    href: "https://github.com/woongsnote",
-  },
-  {
-    title: "Instagram",
-    icon: <RiInstagramLine className="" />,
-    href: "https://instagram.com/woongsnote",
-  },
-  {
-    title: "LinkedIn",
-    icon: <RiLinkedinFill className="" />,
-    href: "https://linkedin.com/in/woongsnote",
-  },
-  {
-    title: "Blog",
-    icon: <RiInbox2Fill className="" />,
-    href: "https://woongsnote.dev",
-  },
+const socials: Social[] = [
+  { icon: <FaGithub />, path: "https://github.com/woongsnote" },
+  { icon: <FaLinkedin />, path: "https://linkedin.com/in/woongsnote" },
+  { icon: <FaInstagram />, path: "https://instagram.com/woongsnote" },
+  { icon: <FaBlog />, path: "https://woongsnote.dev" },
 ];
 
-const Socials = () => {
+type SocialStyles = {
+  containerStyles: string;
+  iconStyles: string;
+};
+
+const Socials = ({ containerStyles, iconStyles }: SocialStyles) => {
   return (
-    <div className="flex w-full gap-x-6 mx-auto xl:mx-0 items-center justify-center md:justify-start">
-      {SocialLinkItems.map((item) => (
-        <a
-          key={item.title}
-          className="text-foreground text-3xl drop-shadow-xl hover:text-primary hover:scale-125 transition-all"
-          href={item.href}
-          target="_blank"
-        >
-          {item.icon}
+    <div className={containerStyles}>
+      {socials.map(({ icon, path }, index) => (
+        <a href={path} key={index} className={iconStyles} target="_blank">
+          {icon}
         </a>
       ))}
     </div>

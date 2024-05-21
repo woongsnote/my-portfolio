@@ -1,15 +1,14 @@
-import About from "@/components/About";
-import Cta from "@/components/Cta";
-import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
+import { Hero, About, ContactMe, Portfolio } from "@/components/Home";
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Hero />
       <About />
-      <Projects />
-      <Cta />
+      <Portfolio />
+      <ContactMe />
     </>
   );
-}
+};
+
+export default Home;

@@ -1,26 +1,10 @@
-import DarkModeToggle from "./DarkModeToggle";
-import Logo from "./Logo";
-import MobileNav from "./MobileNav";
-import Nav from "./Nav";
+import Nav from "./Nav/Nav";
 
 const Header = () => {
   return (
-    <header className='w-full sticky top-0 z-20 bg-white dark:bg-accent shadow-sm'>
-      <div className='container mx-auto py-2'>
-        <div className='flex justify-between items-center'>
-          <Logo />
-          <div className='flex items-center gap-x-6'>
-            <Nav
-              containerStyle='hidden lg:flex gap-x-8 items-center'
-              linkStyle='relative hover:text-primary transition-all'
-              underlineStyle='underline decoration-primary underline-offset-8 decoration-4'
-            />
-            <DarkModeToggle />
-            <div className='lg:hidden'>
-              <MobileNav />
-            </div>
-          </div>
-        </div>
+    <header className="text-white fixed top-4 inset-x-0 z-10">
+      <div className="container flex items-center w-fit mx-auto border border-black/10 shadow-md rounded-lg py-4 bg-primary">
+        <Nav />
       </div>
     </header>
   );
