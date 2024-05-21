@@ -12,7 +12,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
   const { title, description, image, category, stack, github, live } = project;
 
   return (
-    <div className="w-full border max-w-lg mx-auto p-4 rounded-xl break-keep relative border-white/10 flex gap-4 flex-col">
+    <div className="w-full border max-w-lg mx-auto p-3 rounded-xl break-keep relative border-white/10 flex gap-4 flex-col">
       <span className="capitalize">{category}</span>
       <h2 className="text-accent text-3xl">{title}</h2>
       <p className="text-white/60">{description}</p>
@@ -27,9 +27,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
           priority
         />
       </div>
-      <div className="flex flex-wrap gap-4 my-4 aspect-auto">
+      <div className="flex flex-wrap gap-2 lg:gap-4 my-4">
         {stack?.map((item) => (
-          <span key={item} className="capitalize">
+          <span key={item} className="capitalize text-sm lg:text-lg">
             #{item}
           </span>
         ))}

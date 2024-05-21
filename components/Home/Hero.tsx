@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="container">
+    <section className="">
       <div className="flex flex-col lg:flex-row items-center lg:pt-8 lg:pb-24 w-full justify-between mx-auto">
         <div className="text-center lg:text-start order-2 lg:order-none w-full lg:w-2/3">
-          <h1 className="mb-4 text-3xl lg:text-5xl font-black drop-shadow-lg !leading-normal">
+          <h1 className="mb-4 text-2xl sm:text-3xl lg:text-5xl font-black drop-shadow-lg !leading-normal">
             안녕하세요. 저는
             <br />
             <TypeAnimation
