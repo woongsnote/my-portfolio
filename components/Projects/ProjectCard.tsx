@@ -11,13 +11,13 @@ import {
 const ProjectCard = ({ project }: { project: Project }) => {
   const { title, description, image, category, stack, github, live } = project;
   return (
-    <div className="card-wrapper w-full max-w-md h-[400px] md:h-[448px] mx-auto break-keep">
-      <div className="card-content flex items-center justify-center text-start size-full">
-        <div className="p-3 flex flex-col gap-2">
+    <div className="card-wrapper w-full max-w-sm h-[30rem] max-h-max mx-auto break-keep">
+      <div className="card-content flex items-center justify-center text-start w-full">
+        <div className="p-3 flex flex-col gap-3">
           <span className="capitalize">{category}</span>
           <h2 className="text-accent text-3xl">{title}</h2>
           <p className="text-white/60">{description}</p>
-          <div className="w-full md:h-48 rounded-lg overflow-hidden flex flex-col">
+          <div className="w-full h-auto rounded-lg overflow-hidden flex flex-col">
             <Image
               src={image}
               alt={title}
@@ -35,7 +35,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
               </span>
             ))}
           </div>
-          <div className="flex gap-8 mt-2 justify-end">
+          <div className="flex gap-8 my-2 justify-end">
             <a href={github} target="_blank">
               <TooltipProvider delayDuration={100}>
                 <Tooltip>

@@ -7,7 +7,7 @@ const Portfolio = () => {
   return (
     <section className="my-4">
       <h3 className="text-center text-4xl font-bold mb-8">최신 프로젝트</h3>
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-4 items-center justify-center">
         {latestProjects?.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
